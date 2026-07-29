@@ -155,6 +155,7 @@
         <li class="menu__item"><a class="menu__link" href="contacts.html">О клинике</a></li>
       </ul>
       <div class="menu__foot">
+        <a class="btn btn--gold menu__cta" href="#zapis">Записаться на приём</a>
         <a data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
         <span data-field="address">Город, улица, дом</span>
         <span data-field="hours">Ежедневно 00:00 — 00:00</span>
@@ -723,10 +724,14 @@
                 <div class="form__full">
                   <button class="btn btn--gold" type="submit">Отправить заявку</button>
                 </div>
-                <p class="form__note form__full">
-                  Нажимая кнопку, вы соглашаетесь с
-                  <a href="#">политикой обработки персональных данных</a>.
-                </p>
+                <label class="check form__full">
+                  <input type="checkbox" name="consent" required />
+                  <span class="check__box" aria-hidden="true"></span>
+                  <span class="check__text">
+                    Я даю согласие на обработку персональных данных и принимаю
+                    <a href="policy.html" target="_blank" rel="noopener">политику их обработки</a>.
+                  </span>
+                </label>
                 <p class="form-status form__full" role="status"></p>
               </form>
             </div>
@@ -790,7 +795,7 @@
         <div class="footer__bottom">
           <span>© <span data-year>2026</span> <span data-field="clinic-name">Название</span>. Все права защищены.</span>
           <span>Информация на сайте не является публичной офертой.</span>
-          <a href="#">Политика конфиденциальности</a>
+          <a href="policy.html">Политика конфиденциальности</a>
         </div>
       </div>
     </footer>

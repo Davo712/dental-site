@@ -655,8 +655,19 @@
       // подсветка ошибки снимается при вводе
       $$("input, textarea, select", form).forEach(function (input) {
         input.addEventListener("input", function () {
-          var field = input.closest(".field");
-          if (field) field.classList.remove("is-invalid");
+          var holder = input.closest(".field, .check");
+          if (holder) holder.classList.remove("is-invalid");
+
+          // сообщение об ошибке убираем, как только всё исправлено
+          var status = $(".form-status", form);
+          if (
+            status &&
+            status.dataset.state === "error" &&
+            !$(".field.is-invalid, .check.is-invalid", form)
+          ) {
+            status.textContent = "";
+            status.dataset.state = "";
+          }
         });
       });
 
@@ -664,21 +675,33 @@
         e.preventDefault();
 
         var status = $(".form-status", form);
-        var invalid = false;
+        var missingFields = false;
+        var missingConsent = false;
 
-        // проверка обязательных полей
+        // проверка обязательных полей и согласия
         $$("[required]", form).forEach(function (input) {
-          var field = input.closest(".field");
-          var ok = input.value.trim().length > 2;
-          if (field) field.classList.toggle("is-invalid", !ok);
-          if (!ok) invalid = true;
+          var holder = input.closest(".field, .check");
+          var ok =
+            input.type === "checkbox"
+              ? input.checked
+              : input.value.trim().length > 2;
+
+          if (holder) holder.classList.toggle("is-invalid", !ok);
+          if (ok) return;
+
+          if (input.type === "checkbox") missingConsent = true;
+          else missingFields = true;
         });
 
-        if (invalid) {
+        if (missingFields || missingConsent) {
           if (status) {
             status.dataset.state = "error";
-            status.textContent = "Заполните имя и телефон — без них мы не сможем перезвонить.";
+            status.textContent = missingFields
+              ? "Заполните имя и телефон — без них мы не сможем перезвонить."
+              : "Отметьте согласие на обработку персональных данных.";
           }
+          var firstBad = $(".field.is-invalid, .check.is-invalid", form);
+          if (firstBad) firstBad.scrollIntoView({ block: "nearest" });
           return;
         }
 

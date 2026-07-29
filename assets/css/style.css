@@ -75,6 +75,9 @@ h3,
 h4,
 p,
 figure,
+blockquote,
+dl,
+dd,
 ul,
 ol {
   margin: 0;
@@ -526,6 +529,34 @@ button {
   transform: translateY(-100%);
 }
 
+/* При открытом меню шапка должна быть НАД ним, иначе крестик не нажать.
+   Заодно перекрашиваем логотип под тёмный фон меню. */
+body.is-locked .header {
+  z-index: 100;
+  height: var(--header-h);
+}
+
+body.is-locked .header::after {
+  opacity: 0;
+}
+
+body.is-locked .logo {
+  color: var(--paper);
+}
+
+body.is-locked .logo__sub {
+  color: rgba(186, 189, 196, 0.7);
+}
+
+body.is-locked .logo__mark {
+  border-color: rgba(212, 180, 131, 0.7);
+  color: var(--gold);
+}
+
+body.is-locked .header__phone {
+  color: var(--paper);
+}
+
 .header__inner {
   display: flex;
   align-items: center;
@@ -613,14 +644,17 @@ button {
 
 /* Бургер */
 .burger {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  gap: 5px;
-  border: 1px solid var(--line);
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex: none;
   border-radius: 50%;
+  border: 1px solid rgba(3, 2, 2, 0.14);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
   z-index: 101;
+  transition: background 0.45s var(--ease), border-color 0.45s var(--ease),
+    transform 0.45s var(--ease);
 }
 
 @media (min-width: 1000px) {
@@ -629,22 +663,68 @@ button {
   }
 }
 
+.burger:hover {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+.burger:active {
+  transform: scale(0.94);
+}
+
 .burger span {
-  display: block;
-  width: 18px;
-  height: 1.5px;
+  position: absolute;
+  left: 50%;
+  height: 2px;
+  width: 20px;
+  margin-left: -10px;
+  border-radius: 2px;
   background: var(--ink);
-  transition: transform 0.45s var(--ease), opacity 0.3s linear;
+  transition: transform 0.5s var(--ease), width 0.4s var(--ease),
+    opacity 0.25s linear, background 0.4s var(--ease);
+}
+
+.burger span:nth-child(1) {
+  top: 17px;
+}
+
+/* средняя короче — деталь, которая оживляет иконку */
+.burger span:nth-child(2) {
+  top: 23px;
+  width: 13px;
+  margin-left: -3px;
+}
+
+.burger span:nth-child(3) {
+  top: 29px;
+}
+
+.burger:hover span:nth-child(2) {
+  width: 20px;
+  margin-left: -10px;
+}
+
+/* открытое состояние: крест поверх тёмного меню */
+.burger.is-open {
+  background: transparent;
+  border-color: rgba(212, 180, 131, 0.55);
+}
+
+.burger.is-open span {
+  background: var(--cream);
 }
 
 .burger.is-open span:nth-child(1) {
-  transform: translateY(6.5px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
+
 .burger.is-open span:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
+
 .burger.is-open span:nth-child(3) {
-  transform: translateY(-6.5px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Мобильное меню */
@@ -704,10 +784,15 @@ button {
 .menu__foot {
   display: grid;
   gap: 14px;
+  justify-items: start;
   font-size: 0.95rem;
   color: var(--mist);
   opacity: 0;
   transition: opacity 0.5s var(--ease) 0.35s;
+}
+
+.menu__cta {
+  margin-bottom: 10px;
 }
 
 .menu.is-open .menu__foot {
@@ -1912,6 +1997,180 @@ button {
 
 .form-status__link:hover {
   color: var(--paper);
+}
+
+/* --------------------------------------------------------------------------
+   Чекбокс согласия на обработку данных
+   -------------------------------------------------------------------------- */
+.check {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  cursor: pointer;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ink-mute);
+}
+
+.cta .check,
+.section--dark .check {
+  color: rgba(186, 189, 196, 0.8);
+}
+
+/* нативный чекбокс скрыт, но доступен с клавиатуры */
+.check input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  margin: 0;
+}
+
+.check__box {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  flex: none;
+  border: 1px solid rgba(186, 189, 196, 0.6);
+  border-radius: 5px;
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.check__box::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  transform: rotate(45deg) scale(0.4);
+  opacity: 0;
+  transition: transform 0.3s var(--ease), opacity 0.2s linear;
+}
+
+.check:hover .check__box {
+  border-color: var(--gold);
+}
+
+.check input:checked ~ .check__box {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.check input:checked ~ .check__box::after {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+}
+
+.check input:focus-visible ~ .check__box {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.check__text a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.check__text a:hover {
+  color: var(--gold);
+}
+
+.check.is-invalid .check__box {
+  border-color: #e08a74;
+  animation: check-shake 0.4s var(--ease);
+}
+
+.check.is-invalid .check__text {
+  color: #e08a74;
+}
+
+@keyframes check-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Юридический текст (политика обработки данных)
+   -------------------------------------------------------------------------- */
+.legal {
+  max-width: 78ch;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+.legal__meta {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+  margin-bottom: 34px;
+}
+
+.legal h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-top: 46px;
+  margin-bottom: 16px;
+}
+
+.legal h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal p {
+  margin-bottom: 16px;
+}
+
+.legal b {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.legal a {
+  color: var(--gold-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal__list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-left: 4px;
+}
+
+.legal__list li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.legal__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.66em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
 }
 
 /* --------------------------------------------------------------------------
