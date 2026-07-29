@@ -479,7 +479,157 @@
   }
 
   /* ----------------------------------------------------------------------
-     12. Маска телефона + отправка формы (заглушка)
+     12а. Кастомный select — строится из нативного, нативный остаётся
+          в DOM для отправки формы и работы без JS
+     ---------------------------------------------------------------------- */
+  function initSelects() {
+    $$(".field select").forEach(function (native) {
+      if (native.dataset.enhanced) return;
+      native.dataset.enhanced = "1";
+
+      var wrap = document.createElement("div");
+      wrap.className = "select";
+      native.parentNode.insertBefore(wrap, native);
+      wrap.appendChild(native);
+
+      var toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "select__toggle";
+      toggle.setAttribute("aria-haspopup", "listbox");
+      toggle.setAttribute("aria-expanded", "false");
+      if (native.id) toggle.id = native.id + "-toggle";
+
+      var value = document.createElement("span");
+      value.className = "select__value";
+      var chevron = document.createElement("span");
+      chevron.className = "select__chevron";
+      toggle.appendChild(value);
+      toggle.appendChild(chevron);
+
+      var list = document.createElement("ul");
+      list.className = "select__list";
+      list.setAttribute("role", "listbox");
+
+      var options = $$("option", native);
+      var focused = Math.max(0, native.selectedIndex);
+
+      options.forEach(function (option, i) {
+        var li = document.createElement("li");
+        li.className = "select__option";
+        li.setAttribute("role", "option");
+        li.dataset.index = i;
+        li.textContent = option.textContent;
+        list.appendChild(li);
+
+        li.addEventListener("click", function () {
+          select(i);
+          close();
+          toggle.focus();
+        });
+      });
+
+      wrap.appendChild(toggle);
+      wrap.appendChild(list);
+
+      // подпись <label for="..."> должна открывать кастомный список
+      var label = native.id ? $('label[for="' + native.id + '"]') : null;
+      if (label) {
+        label.addEventListener("click", function (e) {
+          e.preventDefault();
+          toggle.focus();
+          open();
+        });
+      }
+
+      function render() {
+        var items = $$(".select__option", list);
+        items.forEach(function (li, i) {
+          li.classList.toggle("is-selected", i === native.selectedIndex);
+          li.classList.toggle("is-focused", i === focused);
+          li.setAttribute(
+            "aria-selected",
+            i === native.selectedIndex ? "true" : "false"
+          );
+        });
+        value.textContent = options[native.selectedIndex]
+          ? options[native.selectedIndex].textContent
+          : "";
+      }
+
+      function select(i) {
+        native.selectedIndex = i;
+        focused = i;
+        native.dispatchEvent(new Event("change", { bubbles: true }));
+        render();
+      }
+
+      function open() {
+        $$(".select.is-open").forEach(function (other) {
+          if (other !== wrap) {
+            other.classList.remove("is-open");
+            $(".select__toggle", other).setAttribute("aria-expanded", "false");
+          }
+        });
+        wrap.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        focused = Math.max(0, native.selectedIndex);
+        render();
+        var active = $(".select__option.is-focused", list);
+        if (active) active.scrollIntoView({ block: "nearest" });
+      }
+
+      function close() {
+        wrap.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+
+      toggle.addEventListener("click", function () {
+        if (wrap.classList.contains("is-open")) close();
+        else open();
+      });
+
+      toggle.addEventListener("keydown", function (e) {
+        var isOpen = wrap.classList.contains("is-open");
+
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+          e.preventDefault();
+          if (!isOpen) {
+            open();
+            return;
+          }
+          focused = Math.min(
+            options.length - 1,
+            Math.max(0, focused + (e.key === "ArrowDown" ? 1 : -1))
+          );
+          render();
+          var active = $(".select__option.is-focused", list);
+          if (active) active.scrollIntoView({ block: "nearest" });
+        } else if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          if (isOpen) {
+            select(focused);
+            close();
+          } else {
+            open();
+          }
+        } else if (e.key === "Escape" && isOpen) {
+          e.preventDefault();
+          close();
+        } else if (e.key === "Tab" && isOpen) {
+          close();
+        }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!wrap.contains(e.target)) close();
+      });
+
+      render();
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     12. Маска телефона + отправка заявки на почту
      ---------------------------------------------------------------------- */
   function initForms() {
     $$('input[type="tel"]').forEach(function (input) {
@@ -561,7 +711,14 @@
         if (status) {
           status.dataset.state = "ok";
           status.textContent =
-            "Открываем почтовую программу — осталось нажать «Отправить» в письме.";
+            "Открываем почтовую программу — осталось нажать «Отправить» в письме. ";
+
+          // запасной вариант, если почтовый клиент не настроен
+          var fallback = document.createElement("a");
+          fallback.href = mailto;
+          fallback.className = "form-status__link";
+          fallback.textContent = "Не открылась? Написать письмо вручную";
+          status.appendChild(fallback);
         }
 
         window.location.href = mailto;
@@ -609,6 +766,7 @@
     initAccordion();
     initSlider();
     initTabs();
+    initSelects();
     initForms();
     initMisc();
     initSmoothScroll();

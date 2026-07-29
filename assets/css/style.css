@@ -9,7 +9,10 @@
   --ink-soft: #202020;
   --ink-mute: #5f5f5f;
   --gold: #d4b483;
-  --gold-deep: #b8945f;
+  /* акцент для крупного текста на светлом фоне (контраст 3.5:1) */
+  --gold-deep: #a8834f;
+  /* акцент для мелких подписей — контраст 5:1, проходит WCAG AA */
+  --gold-text: #7f5f2d;
   --cream: #fcefe0;
   --mist: #babdc4;
   --paper: #ffffff;
@@ -152,7 +155,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold-deep);
+  color: var(--gold-text);
 }
 
 .eyebrow::before {
@@ -572,7 +575,7 @@ button {
 }
 
 .nav__link.is-active {
-  color: var(--gold-deep);
+  color: var(--gold-text);
 }
 
 .header__side {
@@ -936,7 +939,7 @@ button {
 }
 
 .crumbs a:hover {
-  color: var(--gold-deep);
+  color: var(--gold-text);
 }
 
 /* --------------------------------------------------------------------------
@@ -1113,7 +1116,7 @@ button {
   font-family: var(--font-display);
   font-size: 1.1rem;
   letter-spacing: 0.2em;
-  color: var(--gold-deep);
+  color: var(--gold-text);
 }
 
 .feature__title {
@@ -1242,7 +1245,7 @@ button {
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--gold-deep);
+  color: var(--gold-text);
 }
 
 .doctor__bio {
@@ -1370,7 +1373,7 @@ button {
 }
 
 .acc__head:hover {
-  color: var(--gold-deep);
+  color: var(--gold-text);
 }
 
 .acc__title {
@@ -1584,7 +1587,7 @@ button {
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold-deep);
+  color: var(--gold-text);
 }
 
 .contact-item__value {
@@ -1594,12 +1597,26 @@ button {
   line-height: 1.25;
 }
 
-.section--dark .contact-item__value {
+.section--dark .contact-item__value,
+.cta .contact-item__value {
   color: var(--paper);
 }
 
 .contact-item a.contact-item__value:hover {
-  color: var(--gold-deep);
+  color: var(--gold-text);
+}
+
+/* контакты внутри тёмного CTA-блока */
+.cta .contact-item {
+  border-color: rgba(186, 189, 196, 0.18);
+}
+
+.cta .contact-item a.contact-item__value:hover {
+  color: var(--gold);
+}
+
+.cta .muted {
+  color: rgba(186, 189, 196, 0.85);
 }
 
 .map {
@@ -1645,7 +1662,8 @@ button {
   color: var(--ink-mute);
 }
 
-.section--dark .field label {
+.section--dark .field label,
+.cta .field label {
   color: rgba(186, 189, 196, 0.8);
 }
 
@@ -1662,11 +1680,26 @@ button {
   transition: border-color 0.4s var(--ease);
 }
 
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(95, 95, 95, 0.55);
+}
+
 .section--dark .field input,
 .section--dark .field textarea,
-.section--dark .field select {
+.section--dark .field select,
+.cta .field input,
+.cta .field textarea,
+.cta .field select {
   color: var(--paper);
   border-color: rgba(186, 189, 196, 0.3);
+}
+
+.section--dark .field input::placeholder,
+.section--dark .field textarea::placeholder,
+.cta .field input::placeholder,
+.cta .field textarea::placeholder {
+  color: rgba(186, 189, 196, 0.45);
 }
 
 .field input:focus,
@@ -1686,9 +1719,168 @@ button {
   line-height: 1.55;
 }
 
+.section--dark .form__note,
+.cta .form__note {
+  color: rgba(186, 189, 196, 0.7);
+}
+
 .form__note a {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Кастомный select (строится из нативного <select> в app.js)
+   -------------------------------------------------------------------------- */
+.select {
+  position: relative;
+  z-index: 1;
+}
+
+.select.is-open {
+  z-index: 40;
+}
+
+/* нативный select остаётся в DOM ради отправки формы, но скрыт */
+.select > select {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.select__toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 2px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  transition: border-color 0.4s var(--ease), color 0.3s linear;
+}
+
+.cta .select__toggle,
+.section--dark .select__toggle {
+  color: var(--paper);
+  border-color: rgba(186, 189, 196, 0.3);
+}
+
+.select__toggle:hover,
+.select.is-open .select__toggle,
+.select__toggle:focus-visible {
+  border-color: var(--gold);
+  outline: none;
+}
+
+.select__value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.select__chevron {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  margin-bottom: 4px;
+  border-right: 1.5px solid var(--gold-deep);
+  border-bottom: 1.5px solid var(--gold-deep);
+  transform: rotate(45deg);
+  transition: transform 0.45s var(--ease);
+}
+
+.cta .select__chevron,
+.section--dark .select__chevron {
+  border-color: var(--gold);
+}
+
+.select.is-open .select__chevron {
+  transform: rotate(-135deg) translate(-3px, -3px);
+}
+
+.select__list {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 8px;
+  background: var(--paper);
+  border: 1px solid rgba(212, 180, 131, 0.5);
+  border-radius: 14px;
+  box-shadow: 0 28px 60px -26px rgba(3, 2, 2, 0.45);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.985);
+  transform-origin: top center;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease), transform 0.4s var(--ease);
+}
+
+.select.is-open .select__list {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.cta .select__list,
+.section--dark .select__list {
+  background: #14110f;
+  border-color: rgba(212, 180, 131, 0.35);
+}
+
+.select__option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 9px;
+  font-size: 0.94rem;
+  line-height: 1.35;
+  cursor: pointer;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+
+.select__option::before {
+  content: "";
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+
+.select__option:hover,
+.select__option.is-focused {
+  background: var(--cream);
+}
+
+.cta .select__option:hover,
+.cta .select__option.is-focused,
+.section--dark .select__option:hover,
+.section--dark .select__option.is-focused {
+  background: rgba(212, 180, 131, 0.14);
+}
+
+.select__option.is-selected {
+  color: var(--gold-text);
+  font-weight: 600;
+}
+
+.cta .select__option.is-selected,
+.section--dark .select__option.is-selected {
+  color: var(--gold);
+}
+
+.select__option.is-selected::before {
+  opacity: 1;
 }
 
 .field.is-invalid input,
@@ -1702,13 +1894,24 @@ button {
 
 .form-status {
   font-size: 0.85rem;
-  color: var(--gold);
+  color: var(--gold-text);
   min-height: 1.2em;
   transition: color 0.3s linear;
 }
 
 .form-status[data-state="error"] {
   color: #e08a74;
+}
+
+.form-status__link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+.form-status__link:hover {
+  color: var(--paper);
 }
 
 /* --------------------------------------------------------------------------
