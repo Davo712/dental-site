@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# ПЛЕЙСХОЛДЕР: заменить example.ru на реальный домен
+Sitemap: https://example.ru/sitemap.xml
+Host: https://example.ru

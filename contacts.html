@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ПЛЕЙСХОЛДЕР SEO: подставить бренд и город -->
+    <title>О клинике и контакты — НАЗВАНИЕ КЛИНИКИ, стоматология в ГОРОДЕ</title>
+    <meta
+      name="description"
+      content="НАЗВАНИЕ КЛИНИКИ — стоматология в ГОРОДЕ. Адрес, телефон, часы работы, схема проезда, команда врачей и фото клиники."
+    />
+    <link rel="canonical" href="https://example.ru/contacts.html" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="НАЗВАНИЕ КЛИНИКИ" />
+    <meta property="og:title" content="О клинике и контакты — НАЗВАНИЕ КЛИНИКИ" />
+    <meta
+      property="og:description"
+      content="Адрес, телефон, часы работы и команда врачей стоматологии НАЗВАНИЕ КЛИНИКИ."
+    />
+    <meta property="og:url" content="https://example.ru/contacts.html" />
+    <meta property="og:image" content="https://example.ru/assets/img/og-cover.jpg" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Микроразметка: карточка организации для Google / Яндекса -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "@id": "https://example.ru/#clinic",
+        "name": "НАЗВАНИЕ КЛИНИКИ",
+        "alternateName": "НАЗВАНИЕ КЛИНИКИ стоматология",
+        "url": "https://example.ru/",
+        "logo": "https://example.ru/assets/img/logo.png",
+        "image": "https://example.ru/assets/img/og-cover.jpg",
+        "telephone": "+7-000-000-00-00",
+        "email": "mail@example.ru",
+        "priceRange": "₽₽",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "улица, дом",
+          "addressLocality": "Город",
+          "postalCode": "000000",
+          "addressCountry": "RU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "00.000000",
+          "longitude": "00.000000"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00",
+            "closes": "21:00"
+          }
+        ],
+        "sameAs": [
+          "https://t.me/ССЫЛКА",
+          "https://vk.com/ССЫЛКА",
+          "https://www.instagram.com/ССЫЛКА"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://example.ru/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "О клинике и контакты",
+            "item": "https://example.ru/contacts.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body data-page="contacts">
+    <div class="curtain">
+      <span class="curtain__logo" data-field="clinic-name">Название</span>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo" aria-label="На главную">
+          <!-- ПЛЕЙСХОЛДЕР: логотип -->
+          <span class="logo__mark">Л</span>
+          <span class="logo__text">
+            <span class="logo__name" data-field="clinic-name">Название</span>
+            <span class="logo__sub">стоматология</span>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <a class="nav__link" data-nav="home" href="index.html">Главная</a>
+          <a class="nav__link" data-nav="services" href="services.html">Услуги и цены</a>
+          <a class="nav__link" data-nav="contacts" href="contacts.html">О клинике</a>
+        </nav>
+
+        <div class="header__side">
+          <a class="header__phone" data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+          <a class="btn btn--sm header__cta" href="#zapis">Записаться</a>
+          <button class="burger" aria-label="Меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+        <li class="menu__item"><a class="menu__link" href="services.html">Услуги и цены</a></li>
+        <li class="menu__item"><a class="menu__link" href="contacts.html">О клинике</a></li>
+      </ul>
+      <div class="menu__foot">
+        <a data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+        <span data-field="address">Город, улица, дом</span>
+        <span data-field="hours">Ежедневно 00:00 — 00:00</span>
+      </div>
+    </div>
+
+    <main>
+      <!-- ================= ЗАГОЛОВОК ================= -->
+      <section class="page-hero">
+        <div class="hero__glow" data-parallax="0.05"></div>
+        <div class="container">
+          <div class="page-hero__inner">
+            <nav class="crumbs" data-anim="up">
+              <a href="index.html">Главная</a><span>—</span><span>О клинике</span>
+            </nav>
+            <h1 class="display d-1" data-anim="up" data-split>
+              О клинике <em>и контакты</em>
+            </h1>
+            <p class="lead" data-anim="up" style="--delay: 0.12s">
+              Мы построили клинику, в которую не страшно идти: спокойный
+              интерьер, врачи без спешки и оборудование, которое обычно видят
+              только в профильных центрах.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= О НАС ================= -->
+      <section class="section section--tight">
+        <div class="container">
+          <div class="section__head section__head--split">
+            <div>
+              <span class="eyebrow" data-anim="up">О нас</span>
+              <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
+                Стоматология <em>без компромиссов</em>
+              </h2>
+            </div>
+            <p class="lead" data-anim="up">
+              Клиника работает с 0000 года. За это время мы выросли из одного
+              кабинета в центр полного цикла с собственной зуботехнической
+              лабораторией.
+            </p>
+          </div>
+
+          <div class="gallery" style="margin-bottom: 56px">
+            <!-- ПЛЕЙСХОЛДЕРЫ: фото интерьера клиники -->
+            <figure class="gallery__item gallery__item--tall" data-anim="zoom">
+              <div class="ph" data-ph="Интерьер · 700×950" style="--ph-ratio: 3/4"></div>
+            </figure>
+            <figure class="gallery__item gallery__item--wide" data-anim="zoom" style="--delay: 0.08s">
+              <div class="ph" data-ph="Ресепшн · 1000×560" style="--ph-ratio: 16/9"></div>
+            </figure>
+            <figure class="gallery__item" data-anim="zoom" style="--delay: 0.16s">
+              <div class="ph" data-ph="Кабинет · 560×560" style="--ph-ratio: 1/1"></div>
+            </figure>
+            <figure class="gallery__item" data-anim="zoom" style="--delay: 0.24s">
+              <div class="ph" data-ph="Оборудование · 560×560" style="--ph-ratio: 1/1"></div>
+            </figure>
+            <figure class="gallery__item" data-anim="zoom" style="--delay: 0.32s">
+              <div class="ph" data-ph="Детская зона · 560×560" style="--ph-ratio: 1/1"></div>
+            </figure>
+          </div>
+
+          <div class="grid grid--4">
+            <div class="stat" data-anim="up">
+              <span class="stat__num"><span data-count="14">0</span></span>
+              <span class="stat__label">лет клиника принимает пациентов</span>
+            </div>
+            <div class="stat" data-anim="up" style="--delay: 0.08s">
+              <span class="stat__num"><span data-count="12400" data-count-suffix="+">0</span></span>
+              <span class="stat__label">пациентов прошли лечение</span>
+            </div>
+            <div class="stat" data-anim="up" style="--delay: 0.16s">
+              <span class="stat__num"><span data-count="6">0</span></span>
+              <span class="stat__label">операционных и кабинетов</span>
+            </div>
+            <div class="stat" data-anim="up" style="--delay: 0.24s">
+              <span class="stat__num"><span data-count="98" data-count-suffix="%">0</span></span>
+              <span class="stat__label">пациентов возвращаются и рекомендуют</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ОБОРУДОВАНИЕ ================= -->
+      <section class="section section--dark">
+        <div class="container">
+          <div class="section__head section__head--split">
+            <div>
+              <span class="eyebrow" data-anim="up">Оснащение</span>
+              <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
+                Техника, которая <em>решает исход</em>
+              </h2>
+            </div>
+            <p class="lead" data-anim="up">
+              Оборудование обновляем каждые 3–4 года и обучаем на нём всю
+              команду, а не одного врача.
+            </p>
+          </div>
+
+          <div class="grid grid--4">
+            <div class="feature" data-anim="up">
+              <span class="feature__num">01</span>
+              <h3 class="feature__title">3D-томограф</h3>
+              <p class="feature__text">
+                Снимок челюсти за 14 секунд с низкой лучевой нагрузкой. Видим
+                каналы, кисты и объём кости до начала лечения.
+              </p>
+            </div>
+            <div class="feature" data-anim="up" style="--delay: 0.08s">
+              <span class="feature__num">02</span>
+              <h3 class="feature__title">Микроскоп</h3>
+              <p class="feature__text">
+                Увеличение до 25 крат в каждом терапевтическом кабинете —
+                основа перелечивания каналов.
+              </p>
+            </div>
+            <div class="feature" data-anim="up" style="--delay: 0.16s">
+              <span class="feature__num">03</span>
+              <h3 class="feature__title">Цифровой сканер</h3>
+              <p class="feature__text">
+                Слепки без ложек и силикона: модель зубов строится на экране за
+                несколько минут.
+              </p>
+            </div>
+            <div class="feature" data-anim="up" style="--delay: 0.24s">
+              <span class="feature__num">04</span>
+              <h3 class="feature__title">Своя лаборатория</h3>
+              <p class="feature__text">
+                Коронки и виниры делаем сами — быстрее сроки и точная подгонка
+                оттенка прямо в клинике.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= КОМАНДА ================= -->
+      <section class="section" id="team">
+        <div class="container">
+          <div class="section__head section__head--split">
+            <div>
+              <span class="eyebrow" data-anim="up">Команда</span>
+              <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
+                Врачи <em>клиники</em>
+              </h2>
+            </div>
+            <p class="lead" data-anim="up">
+              Все специалисты — с профильной ординатурой и постоянным обучением.
+              Сложные случаи ведём консилиумом из 2–3 врачей.
+            </p>
+          </div>
+
+          <div class="grid grid--4">
+            <!-- ПЛЕЙСХОЛДЕРЫ: фото и имена врачей -->
+            <article class="doctor" data-anim="up">
+              <div class="doctor__media">
+                <div class="ph" data-ph="Фото врача · 600×800"></div>
+                <span class="doctor__exp">Опыт 00 лет</span>
+              </div>
+              <div>
+                <h3 class="doctor__name" data-field="doctor-name">Имя Фамилия</h3>
+                <p class="doctor__role">Главный врач, стоматолог-терапевт</p>
+              </div>
+              <p class="doctor__bio">
+                Микроскопная эндодонтия и эстетические реставрации. Преподаёт на
+                курсах повышения квалификации.
+              </p>
+            </article>
+
+            <article class="doctor" data-anim="up" style="--delay: 0.08s">
+              <div class="doctor__media">
+                <div class="ph" data-ph="Фото врача · 600×800"></div>
+                <span class="doctor__exp">Опыт 00 лет</span>
+              </div>
+              <div>
+                <h3 class="doctor__name" data-field="doctor-name">Имя Фамилия</h3>
+                <p class="doctor__role">Хирург-имплантолог</p>
+              </div>
+              <p class="doctor__bio">
+                Более 4 000 установленных имплантов, костная пластика и
+                синус-лифтинг.
+              </p>
+            </article>
+
+            <article class="doctor" data-anim="up" style="--delay: 0.16s">
+              <div class="doctor__media">
+                <div class="ph" data-ph="Фото врача · 600×800"></div>
+                <span class="doctor__exp">Опыт 00 лет</span>
+              </div>
+              <div>
+                <h3 class="doctor__name" data-field="doctor-name">Имя Фамилия</h3>
+                <p class="doctor__role">Ортодонт</p>
+              </div>
+              <p class="doctor__bio">
+                Элайнеры и брекет-системы у взрослых и подростков.
+              </p>
+            </article>
+
+            <article class="doctor" data-anim="up" style="--delay: 0.24s">
+              <div class="doctor__media">
+                <div class="ph" data-ph="Фото врача · 600×800"></div>
+                <span class="doctor__exp">Опыт 00 лет</span>
+              </div>
+              <div>
+                <h3 class="doctor__name" data-field="doctor-name">Имя Фамилия</h3>
+                <p class="doctor__role">Стоматолог-ортопед</p>
+              </div>
+              <p class="doctor__bio">
+                Цифровое протезирование, виниры, полная реабилитация прикуса.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= КОНТАКТЫ ================= -->
+      <section class="section section--cream" id="contacts">
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow" data-anim="up">Контакты</span>
+            <h2 class="display d-2" data-anim="up" data-split>
+              Как нас <em>найти</em>
+            </h2>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-list" data-anim="up">
+              <!-- ПЛЕЙСХОЛДЕРЫ: адрес, телефон, почта, часы -->
+              <div class="contact-item">
+                <span class="contact-item__label">Адрес</span>
+                <span class="contact-item__value" data-field="address">
+                  Город, улица, дом, этаж
+                </span>
+                <span class="muted" style="font-size: 0.9rem" data-field="metro">
+                  Ориентир / ближайшее метро
+                </span>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item__label">Телефон</span>
+                <a class="contact-item__value" data-field="phone" href="tel:+70000000000">
+                  +7 (000) 000-00-00
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item__label">Почта</span>
+                <a class="contact-item__value" data-field="email" href="mailto:mail@example.ru">
+                  mail@example.ru
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item__label">Часы работы</span>
+                <span class="contact-item__value" data-field="hours">
+                  Ежедневно 00:00 — 00:00
+                </span>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item__label">Мессенджеры</span>
+                <span style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px">
+                  <!-- ПЛЕЙСХОЛДЕРЫ: ссылки на соцсети -->
+                  <a class="btn btn--ghost btn--sm" href="#">Telegram</a>
+                  <a class="btn btn--ghost btn--sm" href="#">WhatsApp</a>
+                  <a class="btn btn--ghost btn--sm" href="#">VK</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="map" data-anim="zoom">
+              <!-- ПЛЕЙСХОЛДЕР КАРТЫ.
+                   Заменить на iframe Яндекс.Карт или Google Maps, например:
+                   <iframe src="https://yandex.ru/map-widget/v1/?ll=..." width="100%" height="420" frameborder="0"></iframe> -->
+              <div class="ph" data-ph="Карта проезда · вставить iframe Яндекс/Google Maps"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ЗАПИСЬ ================= -->
+      <section class="section section--tight" id="zapis">
+        <div class="container">
+          <div class="cta" data-anim="up">
+            <div class="cta__glow"></div>
+            <div class="cta__grid">
+              <div>
+                <span class="eyebrow">Запись на приём</span>
+                <h2 class="display d-2" style="margin: 18px 0 20px">
+                  Приходите <em>знакомиться</em>
+                </h2>
+                <p class="lead" style="color: rgba(186, 189, 196, 0.85)">
+                  Первая консультация с планом лечения — бесплатно. Позвоните
+                  или оставьте номер, перезвоним в течение 15 минут.
+                </p>
+                <div style="margin-top: 30px">
+                  <a class="btn btn--gold" data-field="phone" href="tel:+70000000000">
+                    +7 (000) 000-00-00
+                  </a>
+                </div>
+              </div>
+
+              <form class="form form--2col" data-form novalidate>
+                <div class="field">
+                  <label for="c-name">Ваше имя</label>
+                  <input id="c-name" name="name" type="text" placeholder="Как к вам обращаться" required />
+                </div>
+                <div class="field">
+                  <label for="c-phone">Телефон</label>
+                  <input id="c-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required />
+                </div>
+                <div class="field form__full">
+                  <label for="c-comment">Комментарий</label>
+                  <textarea id="c-comment" name="comment" placeholder="Что беспокоит и когда удобно прийти"></textarea>
+                </div>
+                <div class="form__full">
+                  <button class="btn btn--gold" type="submit">Записаться на приём</button>
+                </div>
+                <p class="form__note form__full">
+                  Нажимая кнопку, вы соглашаетесь с
+                  <a href="#">политикой обработки персональных данных</a>.
+                </p>
+                <p class="form-status form__full" role="status"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= ПОДВАЛ ================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a href="index.html" class="logo">
+              <span class="logo__mark">Л</span>
+              <span class="logo__text">
+                <span class="logo__name" data-field="clinic-name">Название</span>
+                <span class="logo__sub">стоматология</span>
+              </span>
+            </a>
+            <p class="muted" style="margin-top: 20px; max-width: 34ch; font-size: 0.92rem">
+              Стоматология полного цикла для взрослых и детей. Работаем по
+              лицензии <span data-field="license">№ 000-00000-00/00</span>.
+            </p>
+          </div>
+
+          <div>
+            <p class="footer__title">Разделы</p>
+            <ul class="footer__list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="services.html">Услуги и цены</a></li>
+              <li><a href="contacts.html">О клинике</a></li>
+              <li><a href="#zapis">Записаться</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer__title">Услуги</p>
+            <ul class="footer__list">
+              <li><a href="services.html#therapy">Терапия</a></li>
+              <li><a href="services.html#implants">Имплантация</a></li>
+              <li><a href="services.html#orthodontics">Ортодонтия</a></li>
+              <li><a href="services.html#prosthetics">Ортопедия</a></li>
+              <li><a href="services.html#kids">Детская стоматология</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer__title">Контакты</p>
+            <ul class="footer__list">
+              <li><a data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+              <li><a data-field="email" href="mailto:mail@example.ru">mail@example.ru</a></li>
+              <li><span data-field="address">Город, улица, дом</span></li>
+              <li><span data-field="hours">Ежедневно 00:00 — 00:00</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span data-year>2026</span> <span data-field="clinic-name">Название</span>. Все права защищены.</span>
+          <span>Информация на сайте не является публичной офертой.</span>
+          <a href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" aria-label="Наверх">↑</button>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

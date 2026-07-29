@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- ПЛЕЙСХОЛДЕР SEO: подставить бренд, город и домен -->
+    <title>НАЗВАНИЕ КЛИНИКИ — стоматология в ГОРОДЕ | лечение, имплантация, брекеты</title>
+    <meta
+      name="description"
+      content="НАЗВАНИЕ КЛИНИКИ — стоматология полного цикла в ГОРОДЕ: терапия, имплантация, ортодонтия, протезирование, детский приём. Лечение под микроскопом, фиксированная смета, гарантия до 5 лет. Запись по телефону +7 (000) 000-00-00."
+    />
+    <link rel="canonical" href="https://example.ru/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="НАЗВАНИЕ КЛИНИКИ" />
+    <meta property="og:title" content="НАЗВАНИЕ КЛИНИКИ — стоматология в ГОРОДЕ" />
+    <meta
+      property="og:description"
+      content="Стоматология полного цикла: лечение под микроскопом, имплантация, брекеты и элайнеры, детский приём. Первая консультация бесплатно."
+    />
+    <meta property="og:url" content="https://example.ru/" />
+    <meta property="og:image" content="https://example.ru/assets/img/og-cover.jpg" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Микроразметка организации: помогает Google показать бренд,
+         адрес, телефон и часы работы прямо в выдаче -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "@id": "https://example.ru/#clinic",
+        "name": "НАЗВАНИЕ КЛИНИКИ",
+        "alternateName": "НАЗВАНИЕ КЛИНИКИ стоматология",
+        "description": "Стоматология полного цикла в ГОРОДЕ: терапия, имплантация, ортодонтия, ортопедия, хирургия и детский приём.",
+        "url": "https://example.ru/",
+        "logo": "https://example.ru/assets/img/logo.png",
+        "image": "https://example.ru/assets/img/og-cover.jpg",
+        "telephone": "+7-000-000-00-00",
+        "email": "mail@example.ru",
+        "priceRange": "₽₽",
+        "currenciesAccepted": "RUB",
+        "paymentAccepted": "Наличные, банковская карта, рассрочка",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "улица, дом",
+          "addressLocality": "Город",
+          "postalCode": "000000",
+          "addressCountry": "RU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "00.000000",
+          "longitude": "00.000000"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00",
+            "closes": "21:00"
+          }
+        ],
+        "medicalSpecialty": "Dentistry",
+        "availableService": [
+          { "@type": "MedicalProcedure", "name": "Лечение кариеса" },
+          { "@type": "MedicalProcedure", "name": "Лечение каналов под микроскопом" },
+          { "@type": "MedicalProcedure", "name": "Имплантация зубов" },
+          { "@type": "MedicalProcedure", "name": "Брекеты и элайнеры" },
+          { "@type": "MedicalProcedure", "name": "Виниры и коронки" },
+          { "@type": "MedicalProcedure", "name": "Детская стоматология" }
+        ],
+        "sameAs": [
+          "https://t.me/ССЫЛКА",
+          "https://vk.com/ССЫЛКА",
+          "https://www.instagram.com/ССЫЛКА"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://example.ru/#website",
+        "url": "https://example.ru/",
+        "name": "НАЗВАНИЕ КЛИНИКИ",
+        "inLanguage": "ru-RU",
+        "publisher": { "@id": "https://example.ru/#clinic" }
+      }
+    </script>
+  </head>
+
+  <body data-page="home">
+    <!-- ЗАНАВЕС ПРИ ЗАГРУЗКЕ -->
+    <div class="curtain">
+      <!-- ПЛЕЙСХОЛДЕР: название клиники -->
+      <span class="curtain__logo" data-field="clinic-name">Название</span>
+    </div>
+
+    <!-- ================= ШАПКА ================= -->
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo" aria-label="На главную">
+          <!-- ПЛЕЙСХОЛДЕР: логотип (заменить на <img src="assets/img/logo.svg">) -->
+          <span class="logo__mark">Л</span>
+          <span class="logo__text">
+            <span class="logo__name" data-field="clinic-name">Название</span>
+            <span class="logo__sub">стоматология</span>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <a class="nav__link" data-nav="home" href="index.html">Главная</a>
+          <a class="nav__link" data-nav="services" href="services.html">Услуги и цены</a>
+          <a class="nav__link" data-nav="contacts" href="contacts.html">О клинике</a>
+        </nav>
+
+        <div class="header__side">
+          <!-- ПЛЕЙСХОЛДЕР: телефон -->
+          <a class="header__phone" data-field="phone" href="tel:+70000000000">
+            +7 (000) 000-00-00
+          </a>
+          <a class="btn btn--sm header__cta" href="#zapis">Записаться</a>
+          <button class="burger" aria-label="Меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= МОБИЛЬНОЕ МЕНЮ ================= -->
+    <div class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+        <li class="menu__item"><a class="menu__link" href="services.html">Услуги и цены</a></li>
+        <li class="menu__item"><a class="menu__link" href="contacts.html">О клинике</a></li>
+      </ul>
+      <div class="menu__foot">
+        <a data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+        <span data-field="address">Город, улица, дом</span>
+        <span data-field="hours">Ежедневно 00:00 — 00:00</span>
+      </div>
+    </div>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="hero__glow" data-parallax="0.06"></div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <span class="eyebrow" data-anim="up">Стоматология в центре города</span>
+
+            <h1 class="display d-1 hero__title" data-anim="up" data-split>
+              Улыбка, которой <em>доверяют</em>
+            </h1>
+
+            <p class="lead" data-anim="up" style="--delay: 0.12s">
+              Лечим бережно и до результата: диагностика на 3D-томографе,
+              работа под микроскопом и фиксированная смета, которая не меняется
+              в процессе лечения.
+            </p>
+
+            <div class="hero__actions" data-anim="up" style="--delay: 0.2s">
+              <a class="btn" href="#zapis">Записаться на приём</a>
+              <a class="btn btn--ghost" href="services.html">Услуги и цены</a>
+            </div>
+
+            <div class="hero__facts" data-anim="up" style="--delay: 0.28s">
+              <div class="hero__fact">
+                <b><span data-count="14">0</span></b>
+                <span>лет принимаем пациентов</span>
+              </div>
+              <div class="hero__fact">
+                <b><span data-count="12400" data-count-suffix="+">0</span></b>
+                <span>вылеченных пациентов</span>
+              </div>
+              <div class="hero__fact">
+                <b><span data-count="9">0</span></b>
+                <span>врачей в команде</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__media" data-anim="zoom" style="--delay: 0.15s">
+            <!-- ПЛЕЙСХОЛДЕР: главное фото (интерьер клиники / врач) -->
+            <div class="ph" data-ph="Главное фото · 900×1120"></div>
+
+            <div class="hero__badge animate-float-slow" data-parallax="0.05">
+              <b>0%</b>
+              <span>рассрочка до 12 месяцев</span>
+            </div>
+          </div>
+        </div>
+
+        <span class="scroll-hint">листайте</span>
+      </section>
+
+      <!-- ================= БЕГУЩАЯ СТРОКА ================= -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span class="marquee__item">Лечение под микроскопом</span>
+          <span class="marquee__item">Импланты с гарантией</span>
+          <span class="marquee__item">Прозрачные цены</span>
+          <span class="marquee__item">Детский приём</span>
+          <span class="marquee__item">Лечение во сне</span>
+          <span class="marquee__item">Лечение под микроскопом</span>
+          <span class="marquee__item">Импланты с гарантией</span>
+          <span class="marquee__item">Прозрачные цены</span>
+          <span class="marquee__item">Детский приём</span>
+          <span class="marquee__item">Лечение во сне</span>
+        </div>
+      </div>
+
+      <!-- ================= О КЛИНИКЕ КОРОТКО ================= -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head section__head--split">
+            <div>
+              <span class="eyebrow" data-anim="up">Коротко о нас</span>
+              <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
+                Клиника, куда возвращаются <em>семьями</em>
+              </h2>
+            </div>
+            <p class="lead" data-anim="up" style="--delay: 0.1s">
+              Мы не продаём лишнее лечение. Показываем снимки, объясняем причину
+              и предлагаем варианты — от бюджетного до максимально долговечного.
+              Решение всегда остаётся за вами.
+            </p>
+          </div>
+
+          <div class="grid grid--4">
+            <div class="stat" data-anim="up">
+              <span class="stat__num"><span data-count="14">0</span></span>
+              <span class="stat__label">лет клиника принимает пациентов</span>
+            </div>
+            <div class="stat" data-anim="up" style="--delay: 0.08s">
+              <span class="stat__num"><span data-count="12400" data-count-suffix="+">0</span></span>
+              <span class="stat__label">пациентов прошли лечение</span>
+            </div>
+            <div class="stat" data-anim="up" style="--delay: 0.16s">
+              <span class="stat__num"><span data-count="9">0</span></span>
+              <span class="stat__label">врачей с опытом от 8 лет</span>
+            </div>
+            <div class="stat" data-anim="up" style="--delay: 0.24s">
+              <span class="stat__num"><span data-count="98" data-count-suffix="%">0</span></span>
+              <span class="stat__label">пациентов возвращаются и рекомендуют</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= УСЛУГИ ================= -->
+      <section class="section section--cream" id="uslugi">
+        <div class="container">
+          <div class="section__head section__head--split">
+            <div>
+              <span class="eyebrow" data-anim="up">Направления</span>
+              <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
+                Полный цикл лечения <em>в одном месте</em>
+              </h2>
+            </div>
+            <p class="lead" data-anim="up">
+              От профгигиены до полной реабилитации прикуса. Все специалисты в
+              одной команде — вас не отправят в другую клинику на середине пути.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <!-- Карточка 1 -->
+            <article class="card" data-anim="up">
+              <div class="card__media">
+                <!-- ПЛЕЙСХОЛДЕР: фото услуги -->
+                <div class="ph" data-ph="Фото · 800×550"></div>
+                <span class="card__price">от 4 900 ₽</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Терапия</h3>
+                <p class="card__text">
+                  Лечение кариеса и каналов под микроскопом, реставрации,
+                  неотличимые от собственной эмали.
+                </p>
+                <div class="card__foot">
+                  <a class="arrow-link" href="services.html#therapy">Подробнее <i></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 2 -->
+            <article class="card" data-anim="up" style="--delay: 0.08s">
+              <div class="card__media">
+                <div class="ph" data-ph="Фото · 800×550"></div>
+                <span class="card__price">от 52 000 ₽</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Имплантация</h3>
+                <p class="card__text">
+                  Цифровое планирование по КЛКТ, установка по хирургическому
+                  шаблону, пожизненная гарантия на имплант.
+                </p>
+                <div class="card__foot">
+                  <a class="arrow-link" href="services.html#implants">Подробнее <i></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 3 -->
+            <article class="card" data-anim="up" style="--delay: 0.16s">
+              <div class="card__media">
+                <div class="ph" data-ph="Фото · 800×550"></div>
+                <span class="card__price">от 145 000 ₽</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Ортодонтия</h3>
+                <p class="card__text">
+                  Элайнеры и брекеты для взрослых и подростков. Результат виден
+                  в 3D ещё до начала лечения.
+                </p>
+                <div class="card__foot">
+                  <a class="arrow-link" href="services.html#orthodontics">Подробнее <i></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 4 -->
+            <article class="card" data-anim="up">
+              <div class="card__media">
+                <div class="ph" data-ph="Фото · 800×550"></div>
+                <span class="card__price">от 12 000 ₽</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Ортопедия</h3>
+                <p class="card__text">
+                  Виниры, коронки из диоксида циркония и E.max, полное
+                  протезирование. Своя зуботехническая лаборатория.
+                </p>
+                <div class="card__foot">
+                  <a class="arrow-link" href="services.html#prosthetics">Подробнее <i></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 5 -->
+            <article class="card" data-anim="up" style="--delay: 0.08s">
+              <div class="card__media">
+                <div class="ph" data-ph="Фото · 800×550"></div>
+                <span class="card__price">от 5 500 ₽</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Хирургия</h3>
+                <p class="card__text">
+                  Удаление любой сложности, пьезохирургия, лечение во сне под
+                  контролем анестезиолога.
+                </p>
+                <div class="card__foot">
+                  <a class="arrow-link" href="services.html#surgery">Подробнее <i></i></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 6 -->
+            <article class="card" data-anim="up" style="--delay: 0.16s">
+              <div class="card__media">
+                <div class="ph" data-ph="Фото · 800×550"></div>
+                <span class="card__price">от 2 400 ₽</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Детская стоматология</h3>
+                <p class="card__text">
+                  Отдельная детская зона и адаптационные приёмы. Первый визит —
+                  знакомство, а не лечение.
+                </p>
+                <div class="card__foot">
+                  <a class="arrow-link" href="services.html#kids">Подробнее <i></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ПОЧЕМУ МЫ ================= -->
+      <section class="section section--dark">
+        <div class="container">
+          <div class="section__head section__head--split">
+            <div>
+              <span class="eyebrow" data-anim="up">Почему выбирают нас</span>
+              <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
+                Четыре причины <em>остаться надолго</em>
+              </h2>
+            </div>
+            <p class="lead" data-anim="up">
+              Мы строим долгие отношения, а не разовые приёмы: план лечения на
+              годы вперёд, напоминания о гигиене и врач, который вас помнит.
+            </p>
+          </div>
+
+          <div class="grid grid--4">
+            <div class="feature" data-anim="up">
+              <span class="feature__num">01</span>
+              <h3 class="feature__title">Диагностика до рубля</h3>
+              <p class="feature__text">
+                3D-томограф и цифровой сканер на первом приёме. Смета
+                фиксируется — цена не растёт по ходу лечения.
+              </p>
+            </div>
+            <div class="feature" data-anim="up" style="--delay: 0.08s">
+              <span class="feature__num">02</span>
+              <h3 class="feature__title">Лечение под микроскопом</h3>
+              <p class="feature__text">
+                Видим то, что не видно глазом, и сохраняем зубы, которые в
+                других клиниках советовали удалить.
+              </p>
+            </div>
+            <div class="feature" data-anim="up" style="--delay: 0.16s">
+              <span class="feature__num">03</span>
+              <h3 class="feature__title">Без боли и без спешки</h3>
+              <p class="feature__text">
+                Компьютерная анестезия, седация и приёмы по 60–90 минут. Без
+                очередей и недоделанной работы.
+              </p>
+            </div>
+            <div class="feature" data-anim="up" style="--delay: 0.24s">
+              <span class="feature__num">04</span>
+              <h3 class="feature__title">Гарантия и поддержка</h3>
+              <p class="feature__text">
+                До 5 лет гарантии на работы, пожизненная — на импланты. Врач на
+                связи в мессенджере после приёма.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ЭТАПЫ ================= -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow" data-anim="up">Как проходит лечение</span>
+            <h2 class="display d-2" data-anim="up" data-split>
+              Четыре шага <em>без сюрпризов</em>
+            </h2>
+          </div>
+
+          <div class="steps">
+            <div class="step" data-anim="up">
+              <span class="step__num">01</span>
+              <h3 class="step__title">Знакомство и диагностика</h3>
+              <p class="step__text">
+                Осмотр, 3D-снимок и сканирование. Разбираем на экране, что
+                происходит с зубами — вместе с вами.
+              </p>
+            </div>
+            <div class="step" data-anim="up" style="--delay: 0.06s">
+              <span class="step__num">02</span>
+              <h3 class="step__title">План и смета</h3>
+              <p class="step__text">
+                Показываем 2–3 варианта лечения со сроками и ценами. Выбираете
+                вы, без давления и «срочно сегодня».
+              </p>
+            </div>
+            <div class="step" data-anim="up" style="--delay: 0.12s">
+              <span class="step__num">03</span>
+              <h3 class="step__title">Лечение</h3>
+              <p class="step__text">
+                Работаем блоками по 60–90 минут, чтобы визитов было меньше.
+                Комфорт — анестезия или седация.
+              </p>
+            </div>
+            <div class="step" data-anim="up" style="--delay: 0.18s">
+              <span class="step__num">04</span>
+              <h3 class="step__title">Контроль результата</h3>
+              <p class="step__text">
+                Бесплатный осмотр через месяц, напоминания о профгигиене раз в
+                полгода, врач на связи.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ВРАЧИ ================= -->
+      <section class="section section--cream">
+        <div class="container">
+          <div class="section__head section__head--split">
+            <div>
+              <span class="eyebrow" data-anim="up">Команда</span>
+              <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
+                Врачи, которым <em>не всё равно</em>
+              </h2>
+            </div>
+            <p class="lead" data-anim="up">
+              Каждый специалист ведёт своё направление и учится минимум дважды в
+              год. Сложные случаи разбираем консилиумом.
+            </p>
+          </div>
+
+          <div class="grid grid--4">
+            <article class="doctor" data-anim="up">
+              <div class="doctor__media">
+                <!-- ПЛЕЙСХОЛДЕР: фото врача -->
+                <div class="ph" data-ph="Фото врача · 600×800"></div>
+                <span class="doctor__exp">Опыт 00 лет</span>
+              </div>
+              <div>
+                <h3 class="doctor__name" data-field="doctor-name">Имя Фамилия</h3>
+                <p class="doctor__role">Главный врач, стоматолог-терапевт</p>
+              </div>
+              <p class="doctor__bio">
+                Микроскопная эндодонтия и эстетические реставрации. Преподаёт на
+                курсах повышения квалификации.
+              </p>
+            </article>
+
+            <article class="doctor" data-anim="up" style="--delay: 0.08s">
+              <div class="doctor__media">
+                <div class="ph" data-ph="Фото врача · 600×800"></div>
+                <span class="doctor__exp">Опыт 00 лет</span>
+              </div>
+              <div>
+                <h3 class="doctor__name" data-field="doctor-name">Имя Фамилия</h3>
+                <p class="doctor__role">Хирург-имплантолог</p>
+              </div>
+              <p class="doctor__bio">
+                Более 4 000 установленных имплантов. Сертификаты Straumann и
+                Nobel Biocare.
+              </p>
+            </article>
+
+            <article class="doctor" data-anim="up" style="--delay: 0.16s">
+              <div class="doctor__media">
+                <div class="ph" data-ph="Фото врача · 600×800"></div>
+                <span class="doctor__exp">Опыт 00 лет</span>
+              </div>
+              <div>
+                <h3 class="doctor__name" data-field="doctor-name">Имя Фамилия</h3>
+                <p class="doctor__role">Ортодонт</p>
+              </div>
+              <p class="doctor__bio">
+                Элайнеры и брекет-системы у взрослых. Ведёт сложные случаи с
+                потерей опоры.
+              </p>
+            </article>
+
+            <article class="doctor" data-anim="up" style="--delay: 0.24s">
+              <div class="doctor__media">
+                <div class="ph" data-ph="Фото врача · 600×800"></div>
+                <span class="doctor__exp">Опыт 00 лет</span>
+              </div>
+              <div>
+                <h3 class="doctor__name" data-field="doctor-name">Имя Фамилия</h3>
+                <p class="doctor__role">Стоматолог-ортопед</p>
+              </div>
+              <p class="doctor__bio">
+                Цифровое протезирование, виниры, полная реабилитация прикуса.
+              </p>
+            </article>
+          </div>
+
+          <div style="margin-top: 44px" data-anim="up">
+            <a class="btn btn--ghost" href="contacts.html#team">Вся команда</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ОТЗЫВЫ ================= -->
+      <section class="section section--dark">
+        <div class="container reviews" data-slider>
+          <div class="section__head section__head--split">
+            <div>
+              <span class="eyebrow" data-anim="up">Отзывы</span>
+              <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
+                Что говорят <em>пациенты</em>
+              </h2>
+            </div>
+          </div>
+
+          <div class="reviews__viewport">
+            <div class="reviews__track">
+              <blockquote class="review">
+                <span class="review__mark">“</span>
+                <p class="review__quote">
+                  Пришла с «зуб надо удалять» из другой клиники. Здесь
+                  перелечили каналы под микроскопом — зуб на месте третий год.
+                  Всё объяснили и показали снимки.
+                </p>
+                <footer class="review__meta">
+                  <span class="review__name" data-field="review-author">Имя пациента</span>
+                  <span class="review__service">Терапия</span>
+                </footer>
+              </blockquote>
+
+              <blockquote class="review">
+                <span class="review__mark">“</span>
+                <p class="review__quote">
+                  Поставил два импланта. Смета не изменилась ни на рубль, хирург
+                  писал в мессенджер каждый вечер первые три дня. Такого сервиса
+                  не встречал.
+                </p>
+                <footer class="review__meta">
+                  <span class="review__name" data-field="review-author">Имя пациента</span>
+                  <span class="review__service">Имплантация</span>
+                </footer>
+              </blockquote>
+
+              <blockquote class="review">
+                <span class="review__mark">“</span>
+                <p class="review__quote">
+                  Сын боялся стоматологов до истерики. Два адаптационных приёма
+                  — и он сам просится «к тёте-доктору». Это дорогого стоит.
+                </p>
+                <footer class="review__meta">
+                  <span class="review__name" data-field="review-author">Имя пациента</span>
+                  <span class="review__service">Детская стоматология</span>
+                </footer>
+              </blockquote>
+
+              <blockquote class="review">
+                <span class="review__mark">“</span>
+                <p class="review__quote">
+                  Год на элайнерах, контроль почти весь онлайн. Результат совпал
+                  с 3D-планом, который показали на первом приёме.
+                </p>
+                <footer class="review__meta">
+                  <span class="review__name" data-field="review-author">Имя пациента</span>
+                  <span class="review__service">Ортодонтия</span>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="slider-nav">
+            <button class="slider-btn" data-slider-prev aria-label="Предыдущий отзыв">←</button>
+            <button class="slider-btn" data-slider-next aria-label="Следующий отзыв">→</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ЗАПИСЬ ================= -->
+      <section class="section" id="zapis">
+        <div class="container">
+          <div class="cta" data-anim="up">
+            <div class="cta__glow"></div>
+            <div class="cta__grid">
+              <div>
+                <span class="eyebrow">Запись на приём</span>
+                <h2 class="display d-2" style="margin: 18px 0 20px">
+                  Первая консультация <em>бесплатно</em>
+                </h2>
+                <p class="lead" style="color: rgba(186, 189, 196, 0.85)">
+                  Оставьте номер — администратор перезвонит в течение 15 минут,
+                  подберёт удобное время и ответит на вопросы по стоимости.
+                </p>
+
+                <div class="contact-list" style="margin-top: 34px">
+                  <div class="contact-item">
+                    <span class="contact-item__label">Телефон</span>
+                    <!-- ПЛЕЙСХОЛДЕР: телефон -->
+                    <a class="contact-item__value" data-field="phone" href="tel:+70000000000">
+                      +7 (000) 000-00-00
+                    </a>
+                  </div>
+                  <div class="contact-item">
+                    <span class="contact-item__label">Адрес</span>
+                    <!-- ПЛЕЙСХОЛДЕР: адрес -->
+                    <span class="contact-item__value" data-field="address">
+                      Город, улица, дом, этаж
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <form class="form form--2col" data-form novalidate>
+                <div class="field">
+                  <label for="h-name">Ваше имя</label>
+                  <input id="h-name" name="name" type="text" placeholder="Как к вам обращаться" required />
+                </div>
+                <div class="field">
+                  <label for="h-phone">Телефон</label>
+                  <input id="h-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required />
+                </div>
+                <div class="field form__full">
+                  <label for="h-service">Направление</label>
+                  <select id="h-service" name="service">
+                    <option>Не знаю, нужна консультация</option>
+                    <option>Терапия</option>
+                    <option>Имплантация</option>
+                    <option>Ортодонтия</option>
+                    <option>Ортопедия</option>
+                    <option>Хирургия</option>
+                    <option>Детская стоматология</option>
+                  </select>
+                </div>
+                <div class="field form__full">
+                  <label for="h-comment">Комментарий</label>
+                  <textarea id="h-comment" name="comment" placeholder="Что беспокоит и когда удобно прийти"></textarea>
+                </div>
+                <div class="form__full">
+                  <button class="btn btn--gold" type="submit">Отправить заявку</button>
+                </div>
+                <p class="form__note form__full">
+                  Нажимая кнопку, вы соглашаетесь с
+                  <a href="#">политикой обработки персональных данных</a>.
+                </p>
+                <p class="form-status form__full" role="status"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= ПОДВАЛ ================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <a href="index.html" class="logo">
+              <!-- ПЛЕЙСХОЛДЕР: логотип -->
+              <span class="logo__mark">Л</span>
+              <span class="logo__text">
+                <span class="logo__name" data-field="clinic-name">Название</span>
+                <span class="logo__sub">стоматология</span>
+              </span>
+            </a>
+            <p class="muted" style="margin-top: 20px; max-width: 34ch; font-size: 0.92rem">
+              Стоматология полного цикла для взрослых и детей. Работаем по
+              лицензии <span data-field="license">№ 000-00000-00/00</span>.
+            </p>
+          </div>
+
+          <div>
+            <p class="footer__title">Разделы</p>
+            <ul class="footer__list">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="services.html">Услуги и цены</a></li>
+              <li><a href="contacts.html">О клинике</a></li>
+              <li><a href="#zapis">Записаться</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer__title">Услуги</p>
+            <ul class="footer__list">
+              <li><a href="services.html#therapy">Терапия</a></li>
+              <li><a href="services.html#implants">Имплантация</a></li>
+              <li><a href="services.html#orthodontics">Ортодонтия</a></li>
+              <li><a href="services.html#prosthetics">Ортопедия</a></li>
+              <li><a href="services.html#kids">Детская стоматология</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="footer__title">Контакты</p>
+            <ul class="footer__list">
+              <!-- ПЛЕЙСХОЛДЕРЫ: телефон, почта, адрес, часы -->
+              <li><a data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+              <li><a data-field="email" href="mailto:mail@example.ru">mail@example.ru</a></li>
+              <li><span data-field="address">Город, улица, дом</span></li>
+              <li><span data-field="hours">Ежедневно 00:00 — 00:00</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span data-year>2026</span> <span data-field="clinic-name">Название</span>. Все права защищены.</span>
+          <span>Информация на сайте не является публичной офертой.</span>
+          <a href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" aria-label="Наверх">↑</button>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
