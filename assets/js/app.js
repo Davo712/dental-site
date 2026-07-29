@@ -11,6 +11,10 @@
      ====================================================================== */
   var CONTACT_EMAIL = "mail@example.ru";
 
+  /* ПЛЕЙСХОЛДЕР: номер WhatsApp в формате 79991234567.
+     Если оставить пустым — кнопка WhatsApp не показывается. */
+  var CONTACT_WHATSAPP = "";
+
   var reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
@@ -700,35 +704,150 @@
         lines.push("Отправлено с сайта: " + window.location.href);
 
         var subject = "Заявка на приём с сайта" + (name ? " — " + name : "");
-        var mailto =
-          "mailto:" +
-          to +
-          "?subject=" +
-          encodeURIComponent(subject) +
-          "&body=" +
-          encodeURIComponent(lines.join("\r\n"));
+        var body = lines.join("\r\n");
 
+        showSendOptions(form, status, { to: to, subject: subject, body: body });
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     12б. Выбор способа отправки.
+          mailto работает только если в системе настроена почтовая
+          программа. У большинства посетителей почта в браузере, поэтому
+          даём прямые ссылки на веб-интерфейсы Gmail / Яндекс / Mail.ru —
+          они открываются в новой вкладке с уже заполненным письмом.
+     ---------------------------------------------------------------------- */
+  function showSendOptions(form, status, mail) {
+    var enc = encodeURIComponent;
+    var to = enc(mail.to);
+    var su = enc(mail.subject);
+    var bd = enc(mail.body);
+
+    var targets = [
+      {
+        label: "Gmail",
+        href:
+          "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+          to + "&su=" + su + "&body=" + bd,
+      },
+      {
+        label: "Яндекс Почта",
+        href:
+          "https://mail.yandex.ru/compose?to=" +
+          to + "&subject=" + su + "&body=" + bd,
+      },
+      {
+        label: "Mail.ru",
+        href:
+          "https://e.mail.ru/compose/?to=" +
+          to + "&subject=" + su + "&body=" + bd,
+      },
+      {
+        label: "Outlook",
+        href:
+          "https://outlook.live.com/mail/0/deeplink/compose?to=" +
+          to + "&subject=" + su + "&body=" + bd,
+      },
+      {
+        label: "Почтовая программа",
+        href: "mailto:" + mail.to + "?subject=" + su + "&body=" + bd,
+        sameTab: true,
+      },
+    ];
+
+    // WhatsApp — если в CONTACT_WHATSAPP указан номер
+    if (CONTACT_WHATSAPP) {
+      targets.unshift({
+        label: "WhatsApp",
+        href:
+          "https://wa.me/" +
+          CONTACT_WHATSAPP.replace(/\D/g, "") +
+          "?text=" + enc(mail.subject + "\n\n" + mail.body),
+      });
+    }
+
+    var old = $(".send-options", form);
+    if (old) old.remove();
+
+    var box = document.createElement("div");
+    box.className = "send-options form__full";
+
+    var title = document.createElement("p");
+    title.className = "send-options__title";
+    title.textContent = "Заявка готова. Отправьте её удобным способом:";
+    box.appendChild(title);
+
+    var row = document.createElement("div");
+    row.className = "send-options__row";
+
+    targets.forEach(function (target) {
+      var link = document.createElement("a");
+      link.className = "send-options__btn";
+      link.href = target.href;
+      link.textContent = target.label;
+      if (!target.sameTab) {
+        link.target = "_blank";
+        link.rel = "noopener";
+      }
+      link.addEventListener("click", function () {
         if (status) {
           status.dataset.state = "ok";
           status.textContent =
-            "Открываем почтовую программу — осталось нажать «Отправить» в письме. ";
-
-          // запасной вариант, если почтовый клиент не настроен
-          var fallback = document.createElement("a");
-          fallback.href = mailto;
-          fallback.className = "form-status__link";
-          fallback.textContent = "Не открылась? Написать письмо вручную";
-          status.appendChild(fallback);
+            "Письмо открыто — осталось нажать «Отправить» там.";
         }
-
-        window.location.href = mailto;
-
-        // форму чистим с задержкой, чтобы почтовый клиент успел открыться
         window.setTimeout(function () {
           form.reset();
-        }, 1200);
+          box.remove();
+        }, 1500);
       });
+      row.appendChild(link);
     });
+
+    // копирование текста заявки — на случай, если ничего не подошло
+    var copy = document.createElement("button");
+    copy.type = "button";
+    copy.className = "send-options__btn send-options__btn--ghost";
+    copy.textContent = "Скопировать текст";
+    copy.addEventListener("click", function () {
+      var text = mail.to + "\n" + mail.subject + "\n\n" + mail.body;
+      var area = document.createElement("textarea");
+      area.value = text;
+      area.setAttribute("readonly", "");
+      area.style.position = "fixed";
+      area.style.opacity = "0";
+      document.body.appendChild(area);
+      area.select();
+      try {
+        document.execCommand("copy");
+        copy.textContent = "Скопировано";
+      } catch (err) {
+        copy.textContent = "Не удалось скопировать";
+      }
+      document.body.removeChild(area);
+      window.setTimeout(function () {
+        copy.textContent = "Скопировать текст";
+      }, 2500);
+    });
+    row.appendChild(copy);
+
+    box.appendChild(row);
+
+    var hint = document.createElement("p");
+    hint.className = "send-options__hint";
+    hint.textContent =
+      "Или просто позвоните нам — ответим и запишем на приём сразу.";
+    box.appendChild(hint);
+
+    if (status) {
+      status.dataset.state = "ok";
+      status.textContent = "";
+      status.parentNode.insertBefore(box, status);
+    } else {
+      form.appendChild(box);
+    }
+
+    box.scrollIntoView({ block: "nearest", behavior: "smooth" });
   }
 
   /* ----------------------------------------------------------------------

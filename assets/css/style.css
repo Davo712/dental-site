@@ -1915,6 +1915,98 @@ button {
 }
 
 /* --------------------------------------------------------------------------
+   Выбор способа отправки заявки
+   -------------------------------------------------------------------------- */
+.send-options {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid rgba(212, 180, 131, 0.45);
+  border-radius: 14px;
+  background: rgba(212, 180, 131, 0.07);
+  animation: send-options-in 0.5s var(--ease) both;
+}
+
+@keyframes send-options-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.send-options__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.cta .send-options__title,
+.section--dark .send-options__title {
+  color: var(--paper);
+}
+
+.send-options__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.send-options__btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 180, 131, 0.55);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.35s var(--ease), color 0.35s var(--ease),
+    transform 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+
+.send-options__btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.send-options__btn--ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.cta .send-options__btn,
+.section--dark .send-options__btn {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--paper);
+  border-color: rgba(212, 180, 131, 0.45);
+}
+
+.cta .send-options__btn:hover,
+.section--dark .send-options__btn:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.send-options__hint {
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+}
+
+.cta .send-options__hint,
+.section--dark .send-options__hint {
+  color: rgba(186, 189, 196, 0.75);
+}
+
+/* --------------------------------------------------------------------------
    CTA
    -------------------------------------------------------------------------- */
 .cta {
