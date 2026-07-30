@@ -46,6 +46,7 @@ robots.txt, sitemap.xml
 | Телефон | +7 (916) 531-46-46 |
 | Телефон | +7 (495) 798-10-44 |
 | WhatsApp и Telegram | на номерах 965 и 916 |
+| Часы работы | Пн–Пт 9:00–21:00, Сб–Вс 10:00–18:00 |
 
 Все значения помечены атрибутами `data-field="phone | phone-2 | phone-3 | address | metro | email | hours"` — правятся поиском по атрибуту.
 
@@ -89,7 +90,6 @@ robots.txt, sitemap.xml
 | Плейсхолдер | Где |
 | ----------- | --- |
 | `data-field="email"` | почта клиники — сейчас `mail@example.ru` |
-| `data-field="hours"` | график работы — сейчас «Ежедневно 00:00 — 00:00», в микроразметке стоит 09:00–21:00 |
 | `data-field="license"` | номер лицензии в подвале |
 | `https://example.ru` | домен — в `canonical`, `og:url`, JSON-LD, `robots.txt`, `sitemap.xml` |
 | координаты `latitude` / `longitude` | в JSON-LD, взять точные из Яндекс.Карт |
