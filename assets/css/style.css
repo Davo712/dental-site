@@ -1195,6 +1195,46 @@ body.is-locked .header__phone {
 }
 
 /* --------------------------------------------------------------------------
+   Наши работы: снимки «до и после»
+   -------------------------------------------------------------------------- */
+.case {
+  display: grid;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.case img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  transition: transform 0.8s var(--ease);
+}
+
+.case:hover img {
+  transform: scale(1.02);
+}
+
+.case__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+/* предупреждение по закону о рекламе медуслуг */
+.case__note {
+  margin-top: clamp(28px, 4vw, 44px);
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--ink-mute);
+  max-width: 70ch;
+}
+
+/* --------------------------------------------------------------------------
    Преимущества
    -------------------------------------------------------------------------- */
 .feature {
