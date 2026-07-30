@@ -65,22 +65,6 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Сколько стоит первая консультация?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Осмотр и консультация — бесплатно. Снимки оплачиваются отдельно и остаются у вас: прицельный — 500 ₽, ортопантомограмма — 1 100 ₽, компьютерная томография — 3 500 ₽. Развёрнутый план лечения с фотопротоколом и диагностическими моделями — 5 000 ₽."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Из чего складывается стоимость имплантации?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Установка имплантата — 35 000 ₽, сам имплантат оплачивается отдельно: NeoBiotech или Osstem — 10 000 ₽, Nobel Biocare или BICON — 27 000 ₽. Формирователь десны — 5 000 ₽, коронка на имплантате — от 25 000 ₽. Итоговую сумму фиксируем в смете до начала лечения."
-            }
-          },
-          {
-            "@type": "Question",
             "name": "На что распространяются скидки?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -110,7 +94,10 @@
 
   <body data-page="services">
     <div class="curtain">
-      <span class="curtain__logo" data-field="clinic-name">EMALIUS</span>
+      <div class="curtain__logo">
+        <img src="assets/img/logo-mark.png" alt="" width="394" height="459" />
+        <span data-field="clinic-name">EMALIUS</span>
+      </div>
     </div>
 
     <!-- ================= ШАПКА ================= -->
@@ -1518,42 +1505,6 @@
           <div class="acc" data-anim="up">
             <div class="acc__item">
               <button class="acc__head" type="button">
-                <span class="acc__title">Сколько стоит первая консультация?</span>
-                <span class="acc__aside"><span class="acc__icon"></span></span>
-              </button>
-              <div class="acc__panel">
-                <div class="acc__inner" style="grid-template-columns: 1fr">
-                  <p class="muted">
-                    Осмотр и консультация — бесплатно. Снимки оплачиваются
-                    отдельно и остаются у вас: прицельный — 500 ₽,
-                    ортопантомограмма — 1 100 ₽, компьютерная томография —
-                    3 500 ₽. Развёрнутый план лечения с фотопротоколом и
-                    диагностическими моделями — 5 000 ₽.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="acc__item">
-              <button class="acc__head" type="button">
-                <span class="acc__title">Из чего складывается стоимость имплантации?</span>
-                <span class="acc__aside"><span class="acc__icon"></span></span>
-              </button>
-              <div class="acc__panel">
-                <div class="acc__inner" style="grid-template-columns: 1fr">
-                  <p class="muted">
-                    Установка имплантата — 35 000 ₽, сам имплантат оплачивается
-                    отдельно: NeoBiotech или Osstem — 10 000 ₽, Nobel Biocare
-                    или BICON — 27 000 ₽. Дальше формирователь десны — 5 000 ₽
-                    и коронка на имплантате — от 25 000 ₽. Итоговую сумму по
-                    вашему случаю фиксируем в смете до начала лечения.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="acc__item">
-              <button class="acc__head" type="button">
                 <span class="acc__title">На что распространяются скидки?</span>
                 <span class="acc__aside"><span class="acc__icon"></span></span>
               </button>
@@ -1670,10 +1621,6 @@
                 <span class="logo__sub">стоматология</span>
               </span>
             </a>
-            <p class="muted" style="margin-top: 20px; max-width: 34ch; font-size: 0.92rem">
-              Стоматология полного цикла для взрослых и детей. Работаем по
-              лицензии <span data-field="license">№ 000-00000-00/00</span>.
-            </p>
           </div>
 
           <div>
