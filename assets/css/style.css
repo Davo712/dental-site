@@ -451,25 +451,24 @@ button {
 }
 
 .logo__mark {
-  width: 42px;
-  height: 42px;
   flex: none;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-  color: var(--gold-deep);
-  transition: background 0.45s var(--ease), color 0.45s var(--ease),
-    transform 0.6s var(--ease);
+  display: block;
+  transition: transform 0.6s var(--ease);
+}
+
+.logo__mark img {
+  display: block;
+  height: 46px;
+  width: auto;
+}
+
+.header.is-stuck .logo__mark img {
+  height: 40px;
+  transition: height 0.4s var(--ease);
 }
 
 .logo:hover .logo__mark {
-  background: var(--gold);
-  color: var(--ink);
-  transform: rotate(-8deg);
+  transform: scale(1.06) rotate(-3deg);
 }
 
 .logo__text {
@@ -479,8 +478,8 @@ button {
 
 .logo__name {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  letter-spacing: 0.04em;
+  font-size: 1.35rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -1718,551 +1717,123 @@ body.is-locked .header__phone {
 }
 
 /* --------------------------------------------------------------------------
-   Форма
+   Контакты: телефоны и мессенджеры
    -------------------------------------------------------------------------- */
-.form {
-  display: grid;
-  gap: 18px;
-}
-
-@media (min-width: 700px) {
-  .form--2col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .form__full {
-    grid-column: 1 / -1;
-  }
-}
-
-.field {
-  position: relative;
-  display: grid;
-  gap: 8px;
-}
-
-.field label {
-  font-size: 0.74rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-}
-
-.section--dark .field label,
-.cta .field label {
-  color: rgba(186, 189, 196, 0.8);
-}
-
-.field input,
-.field textarea,
-.field select {
-  width: 100%;
-  padding: 15px 2px;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--line);
-  border-radius: 0;
-  outline: none;
-  transition: border-color 0.4s var(--ease);
-}
-
-.field input::placeholder,
-.field textarea::placeholder {
-  color: rgba(95, 95, 95, 0.55);
-}
-
-.section--dark .field input,
-.section--dark .field textarea,
-.section--dark .field select,
-.cta .field input,
-.cta .field textarea,
-.cta .field select {
-  color: var(--paper);
-  border-color: rgba(186, 189, 196, 0.3);
-}
-
-.section--dark .field input::placeholder,
-.section--dark .field textarea::placeholder,
-.cta .field input::placeholder,
-.cta .field textarea::placeholder {
-  color: rgba(186, 189, 196, 0.45);
-}
-
-.field input:focus,
-.field textarea:focus,
-.field select:focus {
-  border-color: var(--gold);
-}
-
-.field textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-.form__note {
-  font-size: 0.78rem;
-  color: var(--ink-mute);
-  line-height: 1.55;
-}
-
-.section--dark .form__note,
-.cta .form__note {
-  color: rgba(186, 189, 196, 0.7);
-}
-
-.form__note a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* --------------------------------------------------------------------------
-   Кастомный select (строится из нативного <select> в app.js)
-   -------------------------------------------------------------------------- */
-.select {
-  position: relative;
-  z-index: 1;
-}
-
-.select.is-open {
-  z-index: 40;
-}
-
-/* нативный select остаётся в DOM ради отправки формы, но скрыт */
-.select > select {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  border: 0;
-}
-
-.select__toggle {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 15px 2px;
-  text-align: left;
-  border-bottom: 1px solid var(--line);
-  transition: border-color 0.4s var(--ease), color 0.3s linear;
-}
-
-.cta .select__toggle,
-.section--dark .select__toggle {
-  color: var(--paper);
-  border-color: rgba(186, 189, 196, 0.3);
-}
-
-.select__toggle:hover,
-.select.is-open .select__toggle,
-.select__toggle:focus-visible {
-  border-color: var(--gold);
-  outline: none;
-}
-
-.select__value {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.select__chevron {
-  flex: none;
-  width: 9px;
-  height: 9px;
-  margin-bottom: 4px;
-  border-right: 1.5px solid var(--gold-deep);
-  border-bottom: 1.5px solid var(--gold-deep);
-  transform: rotate(45deg);
-  transition: transform 0.45s var(--ease);
-}
-
-.cta .select__chevron,
-.section--dark .select__chevron {
-  border-color: var(--gold);
-}
-
-.select.is-open .select__chevron {
-  transform: rotate(-135deg) translate(-3px, -3px);
-}
-
-.select__list {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  right: 0;
-  z-index: 5;
-  padding: 8px;
-  background: var(--paper);
-  border: 1px solid rgba(212, 180, 131, 0.5);
-  border-radius: 14px;
-  box-shadow: 0 28px 60px -26px rgba(3, 2, 2, 0.45);
-  opacity: 0;
-  transform: translateY(-8px) scale(0.985);
-  transform-origin: top center;
-  pointer-events: none;
-  transition: opacity 0.35s var(--ease), transform 0.4s var(--ease);
-}
-
-.select.is-open .select__list {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-
-.cta .select__list,
-.section--dark .select__list {
-  background: #14110f;
-  border-color: rgba(212, 180, 131, 0.35);
-}
-
-.select__option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 14px;
-  border-radius: 9px;
-  font-size: 0.94rem;
-  line-height: 1.35;
-  cursor: pointer;
-  transition: background 0.25s var(--ease), color 0.25s var(--ease);
-}
-
-.select__option::before {
-  content: "";
-  flex: none;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: currentColor;
-  opacity: 0;
-  transition: opacity 0.25s linear;
-}
-
-.select__option:hover,
-.select__option.is-focused {
-  background: var(--cream);
-}
-
-.cta .select__option:hover,
-.cta .select__option.is-focused,
-.section--dark .select__option:hover,
-.section--dark .select__option.is-focused {
-  background: rgba(212, 180, 131, 0.14);
-}
-
-.select__option.is-selected {
-  color: var(--gold-text);
-  font-weight: 600;
-}
-
-.cta .select__option.is-selected,
-.section--dark .select__option.is-selected {
-  color: var(--gold);
-}
-
-.select__option.is-selected::before {
-  opacity: 1;
-}
-
-.field.is-invalid input,
-.field.is-invalid textarea {
-  border-color: #c0553f;
-}
-
-.field.is-invalid label {
-  color: #c0553f;
-}
-
-.form-status {
-  font-size: 0.85rem;
-  color: var(--gold-text);
-  min-height: 1.2em;
-  transition: color 0.3s linear;
-}
-
-.form-status[data-state="error"] {
-  color: #e08a74;
-}
-
-.form-status__link {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  white-space: nowrap;
-}
-
-.form-status__link:hover {
-  color: var(--paper);
-}
-
-/* --------------------------------------------------------------------------
-   Чекбокс согласия на обработку данных
-   -------------------------------------------------------------------------- */
-.check {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 12px;
-  align-items: start;
-  cursor: pointer;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: var(--ink-mute);
-}
-
-.cta .check,
-.section--dark .check {
-  color: rgba(186, 189, 196, 0.8);
-}
-
-/* нативный чекбокс скрыт, но доступен с клавиатуры */
-.check input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  margin: 0;
-}
-
-.check__box {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  margin-top: 1px;
-  flex: none;
-  border: 1px solid rgba(186, 189, 196, 0.6);
-  border-radius: 5px;
-  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
-}
-
-.check__box::after {
-  content: "";
-  position: absolute;
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border-right: 2px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
-  transform: rotate(45deg) scale(0.4);
-  opacity: 0;
-  transition: transform 0.3s var(--ease), opacity 0.2s linear;
-}
-
-.check:hover .check__box {
-  border-color: var(--gold);
-}
-
-.check input:checked ~ .check__box {
-  background: var(--gold);
-  border-color: var(--gold);
-}
-
-.check input:checked ~ .check__box::after {
-  transform: rotate(45deg) scale(1);
-  opacity: 1;
-}
-
-.check input:focus-visible ~ .check__box {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
-}
-
-.check__text a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.check__text a:hover {
-  color: var(--gold);
-}
-
-.check.is-invalid .check__box {
-  border-color: #e08a74;
-  animation: check-shake 0.4s var(--ease);
-}
-
-.check.is-invalid .check__text {
-  color: #e08a74;
-}
-
-@keyframes check-shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-4px);
-  }
-  75% {
-    transform: translateX(4px);
-  }
-}
-
-/* --------------------------------------------------------------------------
-   Юридический текст (политика обработки данных)
-   -------------------------------------------------------------------------- */
-.legal {
-  max-width: 78ch;
-  font-size: 0.98rem;
-  line-height: 1.75;
-  color: var(--ink-soft);
-}
-
-.legal__meta {
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold-text);
-  margin-bottom: 34px;
-}
-
-.legal h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.4vw, 1.95rem);
-  font-weight: 400;
-  line-height: 1.2;
-  color: var(--ink);
-  margin-top: 46px;
-  margin-bottom: 16px;
-}
-
-.legal h2:first-of-type {
-  margin-top: 0;
-}
-
-.legal p {
-  margin-bottom: 16px;
-}
-
-.legal b {
-  color: var(--ink);
-  font-weight: 700;
-}
-
-.legal a {
-  color: var(--gold-text);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.legal__list {
+.phones {
   display: grid;
   gap: 10px;
-  margin-bottom: 20px;
-  padding-left: 4px;
 }
 
-.legal__list li {
-  position: relative;
-  padding-left: 22px;
-}
-
-.legal__list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.66em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--gold);
-}
-
-/* --------------------------------------------------------------------------
-   Выбор способа отправки заявки
-   -------------------------------------------------------------------------- */
-.send-options {
-  display: grid;
-  gap: 14px;
-  padding: 22px;
-  border: 1px solid rgba(212, 180, 131, 0.45);
-  border-radius: 14px;
-  background: rgba(212, 180, 131, 0.07);
-  animation: send-options-in 0.5s var(--ease) both;
-}
-
-@keyframes send-options-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.send-options__title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.cta .send-options__title,
-.section--dark .send-options__title {
-  color: var(--paper);
-}
-
-.send-options__row {
+.phone-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  align-items: center;
+  gap: 12px;
 }
 
-.send-options__btn {
+.phone-row__num {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  line-height: 1.2;
+  color: var(--ink);
+  transition: color 0.35s var(--ease);
+}
+
+.cta .phone-row__num,
+.section--dark .phone-row__num {
+  color: var(--paper);
+}
+
+.phone-row__num:hover {
+  color: var(--gold-text);
+}
+
+.cta .phone-row__num:hover,
+.section--dark .phone-row__num:hover {
+  color: var(--gold);
+}
+
+.phone-row__main {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.phone-row__note {
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+  padding: 4px 12px;
+  border: 1px solid rgba(212, 180, 131, 0.5);
+  border-radius: 999px;
+}
+
+.cta .phone-row__note,
+.section--dark .phone-row__note {
+  color: var(--gold);
+}
+
+/* Кнопки мессенджеров */
+.msg-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.msg {
   display: inline-flex;
   align-items: center;
-  padding: 10px 18px;
+  gap: 9px;
+  padding: 10px 18px 10px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(212, 180, 131, 0.55);
-  background: var(--paper);
-  color: var(--ink);
-  font-size: 0.84rem;
+  border: 1px solid rgba(212, 180, 131, 0.5);
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  cursor: pointer;
-  transition: background 0.35s var(--ease), color 0.35s var(--ease),
-    transform 0.35s var(--ease), border-color 0.35s var(--ease);
+  color: var(--ink);
+  transition: background 0.4s var(--ease), color 0.4s var(--ease),
+    transform 0.4s var(--ease), border-color 0.4s var(--ease);
 }
 
-.send-options__btn:hover {
+.cta .msg,
+.section--dark .msg,
+.menu .msg {
+  color: var(--paper);
+  border-color: rgba(212, 180, 131, 0.45);
+}
+
+.msg svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+.msg--tg:hover {
+  background: #229ed9;
+  border-color: #229ed9;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.msg--wa:hover {
+  background: #25d366;
+  border-color: #25d366;
+  color: #04351a;
+  transform: translateY(-2px);
+}
+
+.msg--mail:hover {
   background: var(--gold);
   border-color: var(--gold);
   color: var(--ink);
   transform: translateY(-2px);
 }
 
-.send-options__btn--ghost {
-  background: transparent;
-  color: var(--ink);
-}
-
-.cta .send-options__btn,
-.section--dark .send-options__btn {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--paper);
-  border-color: rgba(212, 180, 131, 0.45);
-}
-
-.cta .send-options__btn:hover,
-.section--dark .send-options__btn:hover {
-  background: var(--gold);
-  color: var(--ink);
-}
-
-.send-options__hint {
-  font-size: 0.8rem;
-  color: var(--ink-mute);
-}
-
-.cta .send-options__hint,
-.section--dark .send-options__hint {
-  color: rgba(186, 189, 196, 0.75);
+/* Крупные кнопки-контакты в блоке записи */
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
 }
 
 /* --------------------------------------------------------------------------

@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- ПЛЕЙСХОЛДЕР: заменить на фавикон бренда -->
-  <rect width="64" height="64" rx="14" fill="#030202"/>
-  <circle cx="32" cy="32" r="20" fill="none" stroke="#d4b483" stroke-width="2"/>
-  <text x="32" y="41" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#d4b483">Л</text>
-</svg>

@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- ПЛЕЙСХОЛДЕР SEO: подставить бренд и город -->
-    <title>О клинике и контакты — НАЗВАНИЕ КЛИНИКИ, стоматология в ГОРОДЕ</title>
+    <title>О клинике и контакты — EMALIUS, стоматология в Москве</title>
     <meta
       name="description"
-      content="НАЗВАНИЕ КЛИНИКИ — стоматология в ГОРОДЕ. Адрес, телефон, часы работы, схема проезда, команда врачей и фото клиники."
+      content="EMALIUS — стоматология в Москве. Адрес, телефон, часы работы, схема проезда, команда врачей и фото клиники."
     />
     <link rel="canonical" href="https://example.ru/contacts.html" />
     <meta name="robots" content="index, follow" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="НАЗВАНИЕ КЛИНИКИ" />
-    <meta property="og:title" content="О клинике и контакты — НАЗВАНИЕ КЛИНИКИ" />
+    <meta property="og:site_name" content="EMALIUS" />
+    <meta property="og:title" content="О клинике и контакты — EMALIUS" />
     <meta
       property="og:description"
-      content="Адрес, телефон, часы работы и команда врачей стоматологии НАЗВАНИЕ КЛИНИКИ."
+      content="Адрес, телефон, часы работы и команда врачей стоматологии EMALIUS."
     />
     <meta property="og:url" content="https://example.ru/contacts.html" />
     <meta property="og:image" content="https://example.ru/assets/img/og-cover.jpg" />
     <meta property="og:locale" content="ru_RU" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,19 +42,19 @@
         "@context": "https://schema.org",
         "@type": "Dentist",
         "@id": "https://example.ru/#clinic",
-        "name": "НАЗВАНИЕ КЛИНИКИ",
-        "alternateName": "НАЗВАНИЕ КЛИНИКИ стоматология",
+        "name": "EMALIUS",
+        "alternateName": "EMALIUS стоматология",
         "url": "https://example.ru/",
         "logo": "https://example.ru/assets/img/logo.png",
         "image": "https://example.ru/assets/img/og-cover.jpg",
-        "telephone": "+7-000-000-00-00",
+        "telephone": "+79651011144",
         "email": "mail@example.ru",
         "priceRange": "₽₽",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "улица, дом",
-          "addressLocality": "Город",
-          "postalCode": "000000",
+          "streetAddress": "Митинская улица, 44",
+          "addressLocality": "Москва",
+          "postalCode": "125430",
           "addressCountry": "RU"
         },
         "geo": {
@@ -108,17 +110,16 @@
 
   <body data-page="contacts">
     <div class="curtain">
-      <span class="curtain__logo" data-field="clinic-name">Название</span>
+      <span class="curtain__logo" data-field="clinic-name">EMALIUS</span>
     </div>
 
     <!-- ================= ШАПКА ================= -->
     <header class="header">
       <div class="container header__inner">
-        <a href="index.html" class="logo" aria-label="На главную">
-          <!-- ПЛЕЙСХОЛДЕР: логотип -->
-          <span class="logo__mark">Л</span>
+        <a href="index.html" class="logo" aria-label="EMALIUS — стоматология, на главную">
+          <span class="logo__mark"><img src="assets/img/logo-mark.png" alt="" width="394" height="420" /></span>
           <span class="logo__text">
-            <span class="logo__name" data-field="clinic-name">Название</span>
+            <span class="logo__name" data-field="clinic-name">EMALIUS</span>
             <span class="logo__sub">стоматология</span>
           </span>
         </a>
@@ -130,7 +131,7 @@
         </nav>
 
         <div class="header__side">
-          <a class="header__phone" data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+          <a class="header__phone" data-field="phone" href="tel:+79651011144">+7 (965) 101-11-44</a>
           <a class="btn btn--sm header__cta" href="#zapis">Записаться</a>
           <button class="burger" aria-label="Меню" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -147,8 +148,8 @@
       </ul>
       <div class="menu__foot">
         <a class="btn btn--gold menu__cta" href="#zapis">Записаться на приём</a>
-        <a data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
-        <span data-field="address">Город, улица, дом</span>
+        <a data-field="phone" href="tel:+79651011144">+7 (965) 101-11-44</a>
+        <span data-field="address">Москва, Митинская ул., 44</span>
         <span data-field="hours">Ежедневно 00:00 — 00:00</span>
       </div>
     </div>
@@ -186,7 +187,7 @@
             </div>
             <p class="lead" data-anim="up">
               Клиника работает с 0000 года. Сегодня это центр полного цикла:
-              терапия и эндодонтия под микроскопом, хирургия, имплантация,
+              терапия и лечение каналов, хирургия, имплантация,
               протезирование по цифровому протоколу и ортодонтия.
             </p>
           </div>
@@ -260,10 +261,10 @@
             </div>
             <div class="feature" data-anim="up" style="--delay: 0.08s">
               <span class="feature__num">02</span>
-              <h3 class="feature__title">Микроскоп</h3>
+              <h3 class="feature__title">Рентген и ОПТГ</h3>
               <p class="feature__text">
-                Увеличение до 25 крат в каждом терапевтическом кабинете —
-                основа перелечивания каналов.
+                Прицельные снимки и панорамный снимок челюстей делаем на месте,
+                результат остаётся у вас на руках.
               </p>
             </div>
             <div class="feature" data-anim="up" style="--delay: 0.16s">
@@ -314,8 +315,8 @@
                 <p class="doctor__role">Главный врач, стоматолог-терапевт</p>
               </div>
               <p class="doctor__bio">
-                Микроскопная эндодонтия и эстетические реставрации. Преподаёт на
-                курсах повышения квалификации.
+                Лечение и перелечивание каналов, эстетические реставрации,
+                отбеливание.
               </p>
             </article>
 
@@ -381,22 +382,57 @@
               <div class="contact-item">
                 <span class="contact-item__label">Адрес</span>
                 <span class="contact-item__value" data-field="address">
-                  Город, улица, дом, этаж
+                  Москва, Митинская ул., 44
                 </span>
                 <span class="muted" style="font-size: 0.9rem" data-field="metro">
-                  Ориентир / ближайшее метро
+                  м. Митино — 1–2 минуты пешком
                 </span>
               </div>
 
               <div class="contact-item">
-                <span class="contact-item__label">Телефон</span>
-                <a class="contact-item__value" data-field="phone" href="tel:+70000000000">
-                  +7 (000) 000-00-00
-                </a>
+                <span class="contact-item__label">Телефоны</span>
+                <div class="phones" style="margin-top: 6px">
+                  <div class="phone-row">
+                    <a class="phone-row__num" data-field="phone" href="tel:+79651011144">
+                      +7 (965) 101-11-44
+                    </a>
+                    <span class="phone-row__note">основной</span>
+                  </div>
+                  <div class="phone-row">
+                    <a class="phone-row__num" data-field="phone-2" href="tel:+79165314646">
+                      +7 (916) 531-46-46
+                    </a>
+                  </div>
+                  <div class="phone-row">
+                    <a class="phone-row__num" data-field="phone-3" href="tel:+74957981044">
+                      +7 (495) 798-10-44
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-item__label">Мессенджеры</span>
+                <div class="msg-links" style="margin-top: 10px">
+                  <a class="msg msg--wa" href="https://wa.me/79651011144" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/><path d="M12.04 2C6.6 2 2.17 6.43 2.17 11.87c0 1.74.46 3.44 1.32 4.94L2 22l5.33-1.4a9.85 9.85 0 0 0 4.7 1.2h.01c5.44 0 9.87-4.43 9.87-9.87 0-2.64-1.03-5.12-2.9-6.98A9.8 9.8 0 0 0 12.04 2Zm0 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.33c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.86 5.8 2.41a8.14 8.14 0 0 1 2.4 5.8c0 4.52-3.68 8.18-8.16 8.18Z"/></svg>
+                    WhatsApp
+                  </a>
+                  <a class="msg msg--tg" href="https://t.me/+79651011144" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.6 18.9 19.2c-.23 1.02-.84 1.27-1.7.79l-4.7-3.47-2.27 2.19c-.25.25-.46.46-.94.46l.33-4.78 8.7-7.86c.38-.34-.08-.53-.59-.19l-10.75 6.77-4.63-1.45c-1.01-.31-1.03-1 .21-1.49l18.1-6.98c.84-.31 1.57.19 1.3 1.41Z"/></svg>
+                    Telegram
+                  </a>
+                </div>
+                <p class="muted" style="margin-top: 12px; font-size: 0.85rem">
+                  Также пишите на
+                  <a data-field="phone-2" href="https://wa.me/79165314646" target="_blank" rel="noopener">+7 (916) 531-46-46</a>
+                  — там тоже WhatsApp и Telegram.
+                </p>
               </div>
 
               <div class="contact-item">
                 <span class="contact-item__label">Почта</span>
+                <!-- ПЛЕЙСХОЛДЕР: почта клиники -->
                 <a class="contact-item__value" data-field="email" href="mailto:mail@example.ru">
                   mail@example.ru
                 </a>
@@ -404,27 +440,23 @@
 
               <div class="contact-item">
                 <span class="contact-item__label">Часы работы</span>
+                <!-- ПЛЕЙСХОЛДЕР: график работы -->
                 <span class="contact-item__value" data-field="hours">
                   Ежедневно 00:00 — 00:00
-                </span>
-              </div>
-
-              <div class="contact-item">
-                <span class="contact-item__label">Мессенджеры</span>
-                <span style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px">
-                  <!-- ПЛЕЙСХОЛДЕРЫ: подставить ссылки на мессенджеры -->
-                  <a class="btn btn--ghost btn--sm" data-field="social-telegram" href="https://t.me/">Telegram</a>
-                  <a class="btn btn--ghost btn--sm" data-field="social-whatsapp" href="https://wa.me/">WhatsApp</a>
-                  <a class="btn btn--ghost btn--sm" data-field="social-vk" href="https://vk.com/">VK</a>
                 </span>
               </div>
             </div>
 
             <div class="map" data-anim="zoom">
-              <!-- ПЛЕЙСХОЛДЕР КАРТЫ.
-                   Заменить на iframe Яндекс.Карт или Google Maps, например:
-                   <iframe src="https://yandex.ru/map-widget/v1/?ll=..." width="100%" height="420" frameborder="0"></iframe> -->
-              <div class="ph" data-ph="Карта проезда · вставить iframe Яндекс/Google Maps"></div>
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%9C%D0%B8%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2044&amp;z=17"
+                width="100%"
+                height="480"
+                frameborder="0"
+                loading="lazy"
+                allowfullscreen
+                title="Карта: Москва, Митинская улица, 44"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -442,53 +474,39 @@
                   Приходите <em>знакомиться</em>
                 </h2>
                 <p class="lead" style="color: rgba(186, 189, 196, 0.85)">
-                  Первая консультация с планом лечения — бесплатно. Позвоните
-                  или оставьте номер, перезвоним в течение 15 минут.
+                  Осмотр и консультация — бесплатно. Позвоните или напишите в
+                  мессенджер, подберём удобное время.
                 </p>
-                <div style="margin-top: 30px">
-                  <!-- ПЛЕЙСХОЛДЕР: телефон -->
-                  <a class="btn btn--gold" data-field="phone" href="tel:+70000000000">
-                    +7 (000) 000-00-00
-                  </a>
-                </div>
-
-                <div class="contact-list" style="margin-top: 26px">
-                  <div class="contact-item">
-                    <span class="contact-item__label">Почта</span>
-                    <!-- ПЛЕЙСХОЛДЕР: почта -->
-                    <a class="contact-item__value" data-field="email" href="mailto:mail@example.ru">
-                      mail@example.ru
-                    </a>
-                  </div>
-                </div>
               </div>
 
-              <form class="form form--2col" data-form novalidate>
-                <div class="field">
-                  <label for="c-name">Ваше имя</label>
-                  <input id="c-name" name="name" type="text" placeholder="Как к вам обращаться" required />
+              <div class="cta__contacts">
+                <!-- ПЛЕЙСХОЛДЕРЫ телефонов: data-field="phone | phone-2 | phone-3" -->
+                <div class="phones">
+                  <div class="phone-row">
+                    <a class="phone-row__num phone-row__main" data-field="phone" href="tel:+79651011144">+7 (965) 101-11-44</a>
+                    <span class="phone-row__note">основной</span>
+                  </div>
+                  <div class="phone-row">
+                    <a class="phone-row__num" data-field="phone-2" href="tel:+79165314646">+7 (916) 531-46-46</a>
+                  </div>
+                  <div class="phone-row">
+                    <a class="phone-row__num" data-field="phone-3" href="tel:+74957981044">+7 (495) 798-10-44</a>
+                  </div>
                 </div>
-                <div class="field">
-                  <label for="c-phone">Телефон</label>
-                  <input id="c-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required />
+
+                <div class="msg-links" style="margin-top: 24px">
+                  <a class="msg msg--wa" href="https://wa.me/79651011144" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/><path d="M12.04 2C6.6 2 2.17 6.43 2.17 11.87c0 1.74.46 3.44 1.32 4.94L2 22l5.33-1.4a9.85 9.85 0 0 0 4.7 1.2h.01c5.44 0 9.87-4.43 9.87-9.87 0-2.64-1.03-5.12-2.9-6.98A9.8 9.8 0 0 0 12.04 2Zm0 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.16 8.16 0 0 1-1.25-4.33c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.86 5.8 2.41a8.14 8.14 0 0 1 2.4 5.8c0 4.52-3.68 8.18-8.16 8.18Z"/></svg> WhatsApp</a>
+                  <a class="msg msg--tg" href="https://t.me/+79651011144" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.94 4.6 18.9 19.2c-.23 1.02-.84 1.27-1.7.79l-4.7-3.47-2.27 2.19c-.25.25-.46.46-.94.46l.33-4.78 8.7-7.86c.38-.34-.08-.53-.59-.19l-10.75 6.77-4.63-1.45c-1.01-.31-1.03-1 .21-1.49l18.1-6.98c.84-.31 1.57.19 1.3 1.41Z"/></svg> Telegram</a>
+                  <!-- ПЛЕЙСХОЛДЕР: почта клиники -->
+                  <a class="msg msg--mail" data-field="email" href="mailto:mail@example.ru"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 8.4 6a1 1 0 0 0 1.2 0L21 7"/></svg> mail@example.ru</a>
                 </div>
-                <div class="field form__full">
-                  <label for="c-comment">Комментарий</label>
-                  <textarea id="c-comment" name="comment" placeholder="Что беспокоит и когда удобно прийти"></textarea>
-                </div>
-                <div class="form__full">
-                  <button class="btn btn--gold" type="submit">Записаться на приём</button>
-                </div>
-                <label class="check form__full">
-                  <input type="checkbox" name="consent" required />
-                  <span class="check__box" aria-hidden="true"></span>
-                  <span class="check__text">
-                    Я даю согласие на обработку персональных данных и принимаю
-                    <a href="policy.html" target="_blank" rel="noopener">политику их обработки</a>.
-                  </span>
-                </label>
-                <p class="form-status form__full" role="status"></p>
-              </form>
+
+                <p class="muted" style="margin-top: 22px; font-size: 0.88rem">
+                  WhatsApp и Telegram работают на номерах
+                  <span data-field="phone">+7 (965) 101-11-44</span> и
+                  <span data-field="phone-2">+7 (916) 531-46-46</span>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -501,9 +519,9 @@
         <div class="footer__grid">
           <div>
             <a href="index.html" class="logo">
-              <span class="logo__mark">Л</span>
+              <span class="logo__mark"><img src="assets/img/logo-mark.png" alt="" width="394" height="420" /></span>
               <span class="logo__text">
-                <span class="logo__name" data-field="clinic-name">Название</span>
+                <span class="logo__name" data-field="clinic-name">EMALIUS</span>
                 <span class="logo__sub">стоматология</span>
               </span>
             </a>
@@ -538,18 +556,17 @@
           <div>
             <p class="footer__title">Контакты</p>
             <ul class="footer__list">
-              <li><a data-field="phone" href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+              <li><a data-field="phone" href="tel:+79651011144">+7 (965) 101-11-44</a></li>
               <li><a data-field="email" href="mailto:mail@example.ru">mail@example.ru</a></li>
-              <li><span data-field="address">Город, улица, дом</span></li>
+              <li><span data-field="address">Москва, Митинская ул., 44</span></li>
               <li><span data-field="hours">Ежедневно 00:00 — 00:00</span></li>
             </ul>
           </div>
         </div>
 
         <div class="footer__bottom">
-          <span>© <span data-year>2026</span> <span data-field="clinic-name">Название</span>. Все права защищены.</span>
+          <span>© <span data-year>2026</span> <span data-field="clinic-name">EMALIUS</span>. Все права защищены.</span>
           <span>Информация на сайте не является публичной офертой.</span>
-          <a href="policy.html">Политика конфиденциальности</a>
         </div>
       </div>
     </footer>
