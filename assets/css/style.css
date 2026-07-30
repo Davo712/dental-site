@@ -1655,13 +1655,18 @@ body.is-locked .header__phone {
   border-radius: var(--radius-lg);
 }
 
-.gallery__item .ph {
+.gallery__item .ph,
+.gallery__item img {
+  display: block;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
   border: 0;
   transition: transform 0.9s var(--ease);
 }
 
-.gallery__item:hover .ph {
+.gallery__item:hover .ph,
+.gallery__item:hover img {
   transform: scale(1.05);
 }
 
