@@ -458,12 +458,12 @@ button {
 
 .logo__mark img {
   display: block;
-  height: 46px;
+  height: 60px;
   width: auto;
 }
 
 .header.is-stuck .logo__mark img {
-  height: 40px;
+  height: 50px;
   transition: height 0.4s var(--ease);
 }
 
@@ -478,13 +478,13 @@ button {
 
 .logo__name {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 .logo__sub {
-  font-size: 0.6rem;
+  font-size: 0.64rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--ink-mute);
@@ -613,22 +613,41 @@ body.is-locked .header__phone {
   gap: 18px;
 }
 
-.header__phone {
+.header__phones {
   display: none;
+  text-align: right;
+  line-height: 1.25;
+}
+
+@media (min-width: 780px) {
+  .header__phones {
+    display: grid;
+    gap: 1px;
+  }
+}
+
+.header__phone {
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
+}
+
+/* второй номер тише основного, чтобы шапка не выглядела перегруженной */
+.header__phone--second {
+  font-weight: 500;
+  font-size: 0.84rem;
+  color: var(--ink-mute);
+}
+
+body.is-locked .header__phone--second {
+  color: var(--ink-mute);
 }
 
 .header__phone:hover {
   color: var(--gold-deep);
 }
 
-@media (min-width: 780px) {
-  .header__phone {
-    display: block;
-  }
-}
+
 
 .header__cta {
   display: none;

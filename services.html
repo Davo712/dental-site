@@ -50,7 +50,7 @@
           "Эмалиус на Митинской"
         ],
         "url": "https://example.ru/",
-        "telephone": "+79651011144",
+        "telephone": ["+79651011144", "+74957981044"],
         "email": "mail@example.ru",
         "priceRange": "₽₽",
         "address": {
@@ -160,7 +160,10 @@
         </nav>
 
         <div class="header__side">
-          <a class="header__phone" data-field="phone" href="tel:+79651011144">+7 (965) 101-11-44</a>
+          <div class="header__phones">
+            <a class="header__phone" data-field="phone" href="tel:+79651011144">+7 (965) 101-11-44</a>
+            <a class="header__phone header__phone--second" data-field="phone-2" href="tel:+74957981044">+7 (495) 798-10-44</a>
+          </div>
           <a class="btn btn--sm header__cta" href="#zapis">Записаться</a>
           <button class="burger" aria-label="Меню" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -196,11 +199,6 @@
             <h1 class="display d-1" data-anim="up" data-split>
               Услуги <em>и цены</em>
             </h1>
-            <p class="lead" data-anim="up" style="--delay: 0.12s">
-              Полный прайс клиники — все 203 позиции, редакция от 3 января
-              2026 года. Точную стоимость по вашему случаю фиксируем в смете
-              после диагностики.
-            </p>
           </div>
         </div>
       </section>
@@ -682,7 +680,7 @@
                   <div>
                     <img class="acc__photo" src="assets/img/services/implants.jpg" alt="Имплантат в кости с абатментом и коронкой, схемы All-on-4 и All-on-6" width="700" height="520" loading="lazy" />
                     <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
-                      Системы NeoBiotech и Osstem (Корея), Nobel Biocare и BICON (США). Синус-лифтинг, пластика альвеолярного отростка, протоколы All-on-4 и All-on-6 с временными протезами «под ключ». Стоимость самого имплантата — в разделе «Расходные материалы».
+                      Системы NeoBiotech и Osstem (Корея), Astra Tech (Швеция), Straumann (Швейцария), Nobel Biocare и BICON (США). Синус-лифтинг, пластика альвеолярного отростка, протоколы All-on-4 и All-on-6 с временными протезами «под ключ». Стоимость самого имплантата — в разделе «Расходные материалы».
                     </p>
                   </div>
                   <div class="price-list">
@@ -1275,6 +1273,16 @@
                       <span class="price-row__value">27 000 ₽</span>
                     </div>
                     <div class="price-row">
+                      <span class="price-row__name">Имплантат Astra Tech 1 ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">20 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Имплантат Straumann 1 ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">27 000 ₽</span>
+                    </div>
+                    <div class="price-row">
                       <span class="price-row__name">Имплантат мини под условно-съемный протез 1ед.</span>
                       <span class="price-row__dots"></span>
                       <span class="price-row__value">10 000 ₽</span>
@@ -1283,11 +1291,6 @@
                       <span class="price-row__name">Абатмент – мультиюнит или индивидуальный; болл-аттачмент 1 ед.</span>
                       <span class="price-row__dots"></span>
                       <span class="price-row__value">10 000 ₽</span>
-                    </div>
-                    <div class="price-row">
-                      <span class="price-row__name">Опора десневая Карапетяна К.Л.; Внутрислизистый имплантат 1ед.</span>
-                      <span class="price-row__dots"></span>
-                      <span class="price-row__value">4 500 ₽</span>
                     </div>
                     <div class="price-row">
                       <span class="price-row__name">Фурнитура композитных зубов на 1 челюсть «TRIBOS»</span>
@@ -1681,6 +1684,7 @@
             <p class="footer__title">Контакты</p>
             <ul class="footer__list">
               <li><a data-field="phone" href="tel:+79651011144">+7 (965) 101-11-44</a></li>
+              <li><a data-field="phone-2" href="tel:+74957981044">+7 (495) 798-10-44</a></li>
               <li><a data-field="email" href="mailto:mail@example.ru">mail@example.ru</a></li>
               <li><span data-field="address">Москва, Митинская ул., 44</span></li>
               <li><span data-field="hours">Пн–Пт 9:00–21:00, Сб–Вс 10:00–16:00</span></li>
