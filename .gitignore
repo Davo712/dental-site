@@ -3,3 +3,9 @@ Thumbs.db
 node_modules
 .vscode
 *.log
+
+# исходные документы клиники не публикуем в репозитории
+*.doc
+*.docx
+*.xls
+*.xlsx

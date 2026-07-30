@@ -7,7 +7,7 @@
     <title>НАЗВАНИЕ КЛИНИКИ — стоматология в ГОРОДЕ | лечение, имплантация, брекеты</title>
     <meta
       name="description"
-      content="НАЗВАНИЕ КЛИНИКИ — стоматология полного цикла в ГОРОДЕ: терапия, имплантация, ортодонтия, протезирование, детский приём. Лечение под микроскопом, фиксированная смета, гарантия до 5 лет. Запись по телефону +7 (000) 000-00-00."
+      content="НАЗВАНИЕ КЛИНИКИ — стоматология полного цикла в ГОРОДЕ: лечение кариеса и каналов под микроскопом, имплантация NeoBiotech и Nobel Biocare, протезирование, брекеты и элайнеры. Осмотр и консультация бесплатно, фиксированная смета. Запись по телефону +7 (000) 000-00-00."
     />
     <link rel="canonical" href="https://example.ru/" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -17,7 +17,7 @@
     <meta property="og:title" content="НАЗВАНИЕ КЛИНИКИ — стоматология в ГОРОДЕ" />
     <meta
       property="og:description"
-      content="Стоматология полного цикла: лечение под микроскопом, имплантация, брекеты и элайнеры, детский приём. Первая консультация бесплатно."
+      content="Стоматология полного цикла: лечение под микроскопом, имплантация, протезирование, брекеты и элайнеры. Осмотр и консультация бесплатно."
     />
     <meta property="og:url" content="https://example.ru/" />
     <meta property="og:image" content="https://example.ru/assets/img/og-cover.jpg" />
@@ -42,7 +42,7 @@
         "@id": "https://example.ru/#clinic",
         "name": "НАЗВАНИЕ КЛИНИКИ",
         "alternateName": "НАЗВАНИЕ КЛИНИКИ стоматология",
-        "description": "Стоматология полного цикла в ГОРОДЕ: терапия, имплантация, ортодонтия, ортопедия, хирургия и детский приём.",
+        "description": "Стоматология полного цикла в ГОРОДЕ: терапия и профилактика, эндодонтия под микроскопом, хирургия, имплантация, протезирование и ортодонтия.",
         "url": "https://example.ru/",
         "logo": "https://example.ru/assets/img/logo.png",
         "image": "https://example.ru/assets/img/og-cover.jpg",
@@ -81,12 +81,13 @@
         ],
         "medicalSpecialty": "Dentistry",
         "availableService": [
-          { "@type": "MedicalProcedure", "name": "Лечение кариеса" },
+          { "@type": "MedicalProcedure", "name": "Профессиональная гигиена и отбеливание ZOOM AP" },
+          { "@type": "MedicalProcedure", "name": "Лечение кариеса и реставрация зубов" },
           { "@type": "MedicalProcedure", "name": "Лечение каналов под микроскопом" },
-          { "@type": "MedicalProcedure", "name": "Имплантация зубов" },
-          { "@type": "MedicalProcedure", "name": "Брекеты и элайнеры" },
-          { "@type": "MedicalProcedure", "name": "Виниры и коронки" },
-          { "@type": "MedicalProcedure", "name": "Детская стоматология" }
+          { "@type": "MedicalProcedure", "name": "Удаление зубов и хирургия полости рта" },
+          { "@type": "MedicalProcedure", "name": "Имплантация зубов, All-on-4 и All-on-6" },
+          { "@type": "MedicalProcedure", "name": "Протезирование: коронки, виниры, съёмные протезы" },
+          { "@type": "MedicalProcedure", "name": "Брекет-системы и элайнеры" }
         ],
         "sameAs": [
           "https://t.me/ССЫЛКА",
@@ -185,17 +186,18 @@
               <a class="btn btn--ghost" href="services.html">Услуги и цены</a>
             </div>
 
+            <!-- ПЛЕЙСХОЛДЕРЫ: цифры не подтверждены клиникой, заменить на реальные -->
             <div class="hero__facts" data-anim="up" style="--delay: 0.28s">
               <div class="hero__fact">
-                <b><span data-count="14">0</span></b>
+                <b><span data-field="stat-years" data-count="14">0</span></b>
                 <span>лет принимаем пациентов</span>
               </div>
               <div class="hero__fact">
-                <b><span data-count="12400" data-count-suffix="+">0</span></b>
+                <b><span data-field="stat-patients" data-count="12400" data-count-suffix="+">0</span></b>
                 <span>вылеченных пациентов</span>
               </div>
               <div class="hero__fact">
-                <b><span data-count="9">0</span></b>
+                <b><span data-field="stat-doctors" data-count="9">0</span></b>
                 <span>врачей в команде</span>
               </div>
             </div>
@@ -206,8 +208,8 @@
             <div class="ph" data-ph="Главное фото · 900×1120"></div>
 
             <div class="hero__badge animate-float-slow" data-parallax="0.05">
-              <b>0%</b>
-              <span>рассрочка до 12 месяцев</span>
+              <b>0 ₽</b>
+              <span>осмотр и консультация</span>
             </div>
           </div>
         </div>
@@ -219,15 +221,15 @@
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
           <span class="marquee__item">Лечение под микроскопом</span>
-          <span class="marquee__item">Импланты с гарантией</span>
+          <span class="marquee__item">3D-томография</span>
+          <span class="marquee__item">Импланты NeoBiotech и Nobel Biocare</span>
           <span class="marquee__item">Прозрачные цены</span>
-          <span class="marquee__item">Детский приём</span>
-          <span class="marquee__item">Лечение во сне</span>
+          <span class="marquee__item">Скидки для всей семьи</span>
           <span class="marquee__item">Лечение под микроскопом</span>
-          <span class="marquee__item">Импланты с гарантией</span>
+          <span class="marquee__item">3D-томография</span>
+          <span class="marquee__item">Импланты NeoBiotech и Nobel Biocare</span>
           <span class="marquee__item">Прозрачные цены</span>
-          <span class="marquee__item">Детский приём</span>
-          <span class="marquee__item">Лечение во сне</span>
+          <span class="marquee__item">Скидки для всей семьи</span>
         </div>
       </div>
 
@@ -247,6 +249,8 @@
               Решение всегда остаётся за вами.
             </p>
           </div>
+
+          <!-- ПЛЕЙСХОЛДЕРЫ: цифры не подтверждены клиникой, заменить на реальные -->
 
           <div class="grid grid--4">
             <div class="stat" data-anim="up">
@@ -291,13 +295,13 @@
               <div class="card__media">
                 <!-- ПЛЕЙСХОЛДЕР: фото услуги -->
                 <div class="ph" data-ph="Фото · 800×550"></div>
-                <span class="card__price">от 4 900 ₽</span>
+                <span class="card__price">от 3 000 ₽</span>
               </div>
               <div class="card__body">
-                <h3 class="card__title">Терапия</h3>
+                <h3 class="card__title">Терапия и профилактика</h3>
                 <p class="card__text">
-                  Лечение кариеса и каналов под микроскопом, реставрации,
-                  неотличимые от собственной эмали.
+                  Профгигиена Air Flow, лечение кариеса, реставрации
+                  светоотверждаемым композитом, отбеливание ZOOM AP.
                 </p>
                 <div class="card__foot">
                   <a class="arrow-link" href="services.html#therapy">Подробнее <i></i></a>
@@ -309,16 +313,16 @@
             <article class="card" data-anim="up" style="--delay: 0.08s">
               <div class="card__media">
                 <div class="ph" data-ph="Фото · 800×550"></div>
-                <span class="card__price">от 52 000 ₽</span>
+                <span class="card__price">от 2 400 ₽</span>
               </div>
               <div class="card__body">
-                <h3 class="card__title">Имплантация</h3>
+                <h3 class="card__title">Лечение каналов</h3>
                 <p class="card__text">
-                  Цифровое планирование по КЛКТ, установка по хирургическому
-                  шаблону, пожизненная гарантия на имплант.
+                  Эндодонтия под микроскопом: обработка и пломбирование каналов,
+                  перелечивание, распломбировка.
                 </p>
                 <div class="card__foot">
-                  <a class="arrow-link" href="services.html#implants">Подробнее <i></i></a>
+                  <a class="arrow-link" href="services.html#endo">Подробнее <i></i></a>
                 </div>
               </div>
             </article>
@@ -327,16 +331,16 @@
             <article class="card" data-anim="up" style="--delay: 0.16s">
               <div class="card__media">
                 <div class="ph" data-ph="Фото · 800×550"></div>
-                <span class="card__price">от 145 000 ₽</span>
+                <span class="card__price">от 2 000 ₽</span>
               </div>
               <div class="card__body">
-                <h3 class="card__title">Ортодонтия</h3>
+                <h3 class="card__title">Хирургия</h3>
                 <p class="card__text">
-                  Элайнеры и брекеты для взрослых и подростков. Результат виден
-                  в 3D ещё до начала лечения.
+                  Удаление зубов любой сложности, восьмёрки, кисты, пластика
+                  десны и уздечек, лечение пародонта.
                 </p>
                 <div class="card__foot">
-                  <a class="arrow-link" href="services.html#orthodontics">Подробнее <i></i></a>
+                  <a class="arrow-link" href="services.html#surgery">Подробнее <i></i></a>
                 </div>
               </div>
             </article>
@@ -345,16 +349,16 @@
             <article class="card" data-anim="up">
               <div class="card__media">
                 <div class="ph" data-ph="Фото · 800×550"></div>
-                <span class="card__price">от 12 000 ₽</span>
+                <span class="card__price">от 45 000 ₽</span>
               </div>
               <div class="card__body">
-                <h3 class="card__title">Ортопедия</h3>
+                <h3 class="card__title">Имплантация</h3>
                 <p class="card__text">
-                  Виниры, коронки из диоксида циркония и E.max, полное
-                  протезирование. Своя зуботехническая лаборатория.
+                  NeoBiotech, Osstem, Nobel Biocare и BICON. Навигационные
+                  шаблоны, синус-лифтинг, протоколы All-on-4 и All-on-6.
                 </p>
                 <div class="card__foot">
-                  <a class="arrow-link" href="services.html#prosthetics">Подробнее <i></i></a>
+                  <a class="arrow-link" href="services.html#implants">Подробнее <i></i></a>
                 </div>
               </div>
             </article>
@@ -363,16 +367,16 @@
             <article class="card" data-anim="up" style="--delay: 0.08s">
               <div class="card__media">
                 <div class="ph" data-ph="Фото · 800×550"></div>
-                <span class="card__price">от 5 500 ₽</span>
+                <span class="card__price">от 17 000 ₽</span>
               </div>
               <div class="card__body">
-                <h3 class="card__title">Хирургия</h3>
+                <h3 class="card__title">Протезирование</h3>
                 <p class="card__text">
-                  Удаление любой сложности, пьезохирургия, лечение во сне под
-                  контролем анестезиолога.
+                  Коронки металлокерамика, E.max и диоксид циркония, виниры,
+                  съёмные протезы. Цифровой протокол CAD/CAM.
                 </p>
                 <div class="card__foot">
-                  <a class="arrow-link" href="services.html#surgery">Подробнее <i></i></a>
+                  <a class="arrow-link" href="services.html#prosthetics">Подробнее <i></i></a>
                 </div>
               </div>
             </article>
@@ -381,16 +385,16 @@
             <article class="card" data-anim="up" style="--delay: 0.16s">
               <div class="card__media">
                 <div class="ph" data-ph="Фото · 800×550"></div>
-                <span class="card__price">от 2 400 ₽</span>
+                <span class="card__price">от 40 000 ₽</span>
               </div>
               <div class="card__body">
-                <h3 class="card__title">Детская стоматология</h3>
+                <h3 class="card__title">Ортодонтия</h3>
                 <p class="card__text">
-                  Отдельная детская зона и адаптационные приёмы. Первый визит —
-                  знакомство, а не лечение.
+                  Брекет-системы четырёх степеней сложности, элайнеры,
+                  пластинки и ретейнеры. 3D-планирование результата.
                 </p>
                 <div class="card__foot">
-                  <a class="arrow-link" href="services.html#kids">Подробнее <i></i></a>
+                  <a class="arrow-link" href="services.html#orthodontics">Подробнее <i></i></a>
                 </div>
               </div>
             </article>
@@ -435,16 +439,16 @@
               <span class="feature__num">03</span>
               <h3 class="feature__title">Без боли и без спешки</h3>
               <p class="feature__text">
-                Компьютерная анестезия, седация и приёмы по 60–90 минут. Без
+                Аппликационная и инъекционная анестезия, коффердам, приёмы без
                 очередей и недоделанной работы.
               </p>
             </div>
             <div class="feature" data-anim="up" style="--delay: 0.24s">
               <span class="feature__num">04</span>
-              <h3 class="feature__title">Гарантия и поддержка</h3>
+              <h3 class="feature__title">Семейные скидки</h3>
               <p class="feature__text">
-                До 5 лет гарантии на работы, пожизненная — на импланты. Врач на
-                связи в мессенджере после приёма.
+                Работаем по системе скидок и акций для всей семьи. Исключение —
+                расходные материалы, на них скидки не действуют.
               </p>
             </div>
           </div>
@@ -482,8 +486,8 @@
               <span class="step__num">03</span>
               <h3 class="step__title">Лечение</h3>
               <p class="step__text">
-                Работаем блоками по 60–90 минут, чтобы визитов было меньше.
-                Комфорт — анестезия или седация.
+                Работаем блоками, чтобы визитов было меньше. Комфорт —
+                аппликационная и инъекционная анестезия, коффердам.
               </p>
             </div>
             <div class="step" data-anim="up" style="--delay: 0.18s">
@@ -541,8 +545,8 @@
                 <p class="doctor__role">Хирург-имплантолог</p>
               </div>
               <p class="doctor__bio">
-                Более 4 000 установленных имплантов. Сертификаты Straumann и
-                Nobel Biocare.
+                Имплантация NeoBiotech, Osstem и Nobel Biocare, синус-лифтинг,
+                протоколы All-on-4 и All-on-6.
               </p>
             </article>
 
@@ -612,9 +616,8 @@
               <blockquote class="review">
                 <span class="review__mark">“</span>
                 <p class="review__quote">
-                  Поставил два импланта. Смета не изменилась ни на рубль, хирург
-                  писал в мессенджер каждый вечер первые три дня. Такого сервиса
-                  не встречал.
+                  Поставил два импланта NeoBiotech. Всё посчитали заранее:
+                  установка, сам имплант, коронка. Никаких сюрпризов в конце.
                 </p>
                 <footer class="review__meta">
                   <span class="review__name" data-field="review-author">Имя пациента</span>
@@ -625,12 +628,12 @@
               <blockquote class="review">
                 <span class="review__mark">“</span>
                 <p class="review__quote">
-                  Сын боялся стоматологов до истерики. Два адаптационных приёма
-                  — и он сам просится «к тёте-доктору». Это дорогого стоит.
+                  Делала гигиену и отбеливание. Показали смету до начала, по
+                  итогу вышло ровно в неё. Приятно, когда цифры не меняются.
                 </p>
                 <footer class="review__meta">
                   <span class="review__name" data-field="review-author">Имя пациента</span>
-                  <span class="review__service">Детская стоматология</span>
+                  <span class="review__service">Профгигиена</span>
                 </footer>
               </blockquote>
 
@@ -709,12 +712,12 @@
                   <label for="h-service">Направление</label>
                   <select id="h-service" name="service">
                     <option>Не знаю, нужна консультация</option>
-                    <option>Терапия</option>
-                    <option>Имплантация</option>
-                    <option>Ортодонтия</option>
-                    <option>Ортопедия</option>
+                    <option>Терапия и профилактика</option>
+                    <option>Лечение каналов</option>
                     <option>Хирургия</option>
-                    <option>Детская стоматология</option>
+                    <option>Имплантация</option>
+                    <option>Протезирование</option>
+                    <option>Ортодонтия</option>
                   </select>
                 </div>
                 <div class="field form__full">
@@ -772,11 +775,12 @@
           <div>
             <p class="footer__title">Услуги</p>
             <ul class="footer__list">
-              <li><a href="services.html#therapy">Терапия</a></li>
+              <li><a href="services.html#therapy">Терапия и профилактика</a></li>
+              <li><a href="services.html#endo">Лечение каналов</a></li>
+              <li><a href="services.html#surgery">Хирургия</a></li>
               <li><a href="services.html#implants">Имплантация</a></li>
+              <li><a href="services.html#prosthetics">Протезирование</a></li>
               <li><a href="services.html#orthodontics">Ортодонтия</a></li>
-              <li><a href="services.html#prosthetics">Ортопедия</a></li>
-              <li><a href="services.html#kids">Детская стоматология</a></li>
             </ul>
           </div>
 

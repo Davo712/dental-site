@@ -7,7 +7,7 @@
     <title>Услуги и цены — НАЗВАНИЕ КЛИНИКИ, стоматология в ГОРОДЕ</title>
     <meta
       name="description"
-      content="Прайс-лист стоматологии НАЗВАНИЕ КЛИНИКИ: терапия от 4 900 ₽, имплантация от 52 000 ₽, брекеты и элайнеры, виниры, хирургия, детский приём. Фиксированная смета, рассрочка 0%."
+      content="Прайс-лист стоматологии НАЗВАНИЕ КЛИНИКИ: осмотр бесплатно, пломба от 5 000 ₽, лечение канала от 2 400 ₽, удаление от 2 000 ₽, имплантация от 45 000 ₽, коронка от 17 000 ₽, брекеты от 40 000 ₽. Полный прайс, фиксированная смета, семейные скидки."
     />
     <link rel="canonical" href="https://example.ru/services.html" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -66,7 +66,23 @@
             "name": "Сколько стоит первая консультация?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Консультация с осмотром и планом лечения — бесплатно. 3D-снимок, если он нужен, оплачивается отдельно и остаётся у вас на руках."
+              "text": "Осмотр и консультация — бесплатно. Снимки оплачиваются отдельно и остаются у вас: прицельный — 500 ₽, ортопантомограмма — 1 100 ₽, компьютерная томография — 3 500 ₽. Развёрнутый план лечения с фотопротоколом и диагностическими моделями — 5 000 ₽."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Из чего складывается стоимость имплантации?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Установка имплантата — 35 000 ₽, сам имплантат оплачивается отдельно: NeoBiotech или Osstem — 10 000 ₽, Nobel Biocare или BICON — 27 000 ₽. Формирователь десны — 5 000 ₽, коронка на имплантате — от 25 000 ₽. Итоговую сумму фиксируем в смете до начала лечения."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "На что распространяются скидки?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Скидки и акции действуют на медицинские услуги. Исключение — расходные материалы: имплантаты, костные материалы, мембраны, наборы брекетов. На них скидки не распространяются, а стоимость импортных позиций может меняться вслед за курсом валют."
             }
           },
           {
@@ -74,7 +90,7 @@
             "name": "Что делать, если я боюсь лечить зубы?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Скажите об этом администратору при записи. Мы заложим больше времени на приём, начнём с разговора без инструментов, при необходимости предложим седацию или лечение во сне."
+              "text": "Скажите об этом администратору при записи. Мы заложим больше времени на приём и начнём с разговора без инструментов. Перед инъекцией делаем аппликационную анестезию, чтобы вы не почувствовали укол."
             }
           },
           {
@@ -83,14 +99,6 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Да, ежедневно оставляем окна под неотложные приёмы. Позвоните — в большинстве случаев принимаем в день обращения."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Какая гарантия на лечение?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "До 5 лет на терапевтические и ортопедические работы при соблюдении графика профосмотров, пожизненная гарантия производителя — на импланты."
             }
           }
         ]
@@ -158,8 +166,9 @@
               Услуги <em>и цены</em>
             </h1>
             <p class="lead" data-anim="up" style="--delay: 0.12s">
-              Полный прайс без звёздочек и мелкого шрифта. Точную стоимость
-              лечения фиксируем в смете после диагностики — и не меняем её.
+              Полный прайс клиники — все 203 позиции, редакция от 3 января
+              2026 года. Точную стоимость по вашему случаю фиксируем в смете
+              после диагностики.
             </p>
             <div class="hero__actions" data-anim="up" style="--delay: 0.2s">
               <a class="btn" href="#zapis">Рассчитать стоимость</a>
@@ -176,12 +185,12 @@
             <div>
               <span class="eyebrow" data-anim="up">Прайс-лист</span>
               <h2 class="display d-2" data-anim="up" data-split style="margin-top: 18px">
-                Шесть направлений <em>под одной крышей</em>
+                Все направления <em>под одной крышей</em>
               </h2>
             </div>
             <p class="lead" data-anim="up">
-              Нажмите на направление, чтобы раскрыть цены. Первая консультация с
-              планом лечения — бесплатно.
+              Нажмите на направление, чтобы раскрыть цены. Осмотр и
+              консультация — бесплатно.
             </p>
           </div>
 
@@ -189,20 +198,23 @@
           <div class="tabs" data-tabs="#price-acc" data-anim="up">
             <button class="tab is-active" data-cat="all">Все услуги</button>
             <button class="tab" data-cat="therapy">Терапия</button>
-            <button class="tab" data-cat="implants">Имплантация</button>
-            <button class="tab" data-cat="orthodontics">Ортодонтия</button>
-            <button class="tab" data-cat="prosthetics">Ортопедия</button>
+            <button class="tab" data-cat="prophylaxis">Профилактика</button>
+            <button class="tab" data-cat="endo">Каналы</button>
             <button class="tab" data-cat="surgery">Хирургия</button>
-            <button class="tab" data-cat="kids">Детям</button>
+            <button class="tab" data-cat="implants">Имплантация</button>
+            <button class="tab" data-cat="prosthetics">Протезирование</button>
+            <button class="tab" data-cat="orthodontics">Ортодонтия</button>
+            <button class="tab" data-cat="diagnostics">Диагностика</button>
+            <button class="tab" data-cat="materials">Материалы</button>
           </div>
 
+          <!-- Прайс приведён по документу клиники «ПРАЙС Клиники» ред. 03.01.2026 -->
           <div class="acc" id="price-acc" data-anim="up">
-            <!-- ТЕРАПИЯ -->
             <div class="acc__item is-open" data-cat="therapy" id="therapy">
               <button class="acc__head" type="button">
                 <span class="acc__title">Терапия</span>
                 <span class="acc__aside">
-                  <span class="acc__from">от 4 900 ₽</span>
+                  <span class="acc__from">пломба от 5 000 ₽</span>
                   <span class="acc__icon"></span>
                 </span>
               </button>
@@ -212,288 +224,1231 @@
                     <!-- ПЛЕЙСХОЛДЕР: фото направления -->
                     <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
                     <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
-                      Лечим зубы без боли и спешки: диагностика на 3D-томографе,
-                      работа под микроскопом, реставрации, неотличимые от
-                      собственной эмали. Приём — 60–90 минут, чтобы закрыть
-                      вопрос за одно посещение.
+                      Лечение кариеса и восстановление зубов: пломбы из светоотверждаемого композита на одну, две и три поверхности, эстетические реставрации, восстановление культи на стекловолоконном штифте.
                     </p>
                   </div>
                   <div class="price-list">
                     <div class="price-row">
-                      <span class="price-row__name">Консультация и план лечения</span>
+                      <span class="price-row__name">Трепанация зуба, удаление пломбы, формирование полости зуба</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">бесплатно</span>
+                      <span class="price-row__value">1 000 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Лечение кариеса, реставрация</span>
+                      <span class="price-row__name">Наложение временной пломбы (парасепт)</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 6 900 ₽</span>
+                      <span class="price-row__value">1 000 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Лечение канала под микроскопом</span>
+                      <span class="price-row__name">Наложение временной пломбы (композит)</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 8 500 ₽</span>
+                      <span class="price-row__value">1 500 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Профгигиена Air Flow + ультразвук</span>
+                      <span class="price-row__name">Герметизация фиссуры 1 зуба</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">9 200 ₽</span>
+                      <span class="price-row__value">1 600 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Отбеливание Zoom 4</span>
+                      <span class="price-row__name">Прокладка лечебная или изолирующая под фотополимер</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">28 000 ₽</span>
+                      <span class="price-row__value">800 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пломба из фотополимера на временный зуб</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пломба композитная светоотверждаемая на одну поверхность</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">5 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пломба композитная светоотверждаемая на две поверхности</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">6 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пломба композитная светоотверждаемая на три поверхности</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">7 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Эстетическая реставрация зуба композитом светового отверждения</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Восстановление зуба «световой» пломбой после эндодонтического лечения</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">8 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Восстановление культи зуба на стекловолоконный штифт - «BuildUp»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">8 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Восстановление зуба наногибридным композитом SonicFill</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">15 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Установка дополнительного стекловолоконного штифта</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пришлифовывание и полирование пломбы или зуба 1 ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">900 ₽</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- ИМПЛАНТАЦИЯ -->
-            <div class="acc__item" data-cat="implants" id="implants">
+            <div class="acc__item" data-cat="prophylaxis" id="prophylaxis">
               <button class="acc__head" type="button">
-                <span class="acc__title">Имплантация</span>
+                <span class="acc__title">Профилактика и пародонтология</span>
                 <span class="acc__aside">
-                  <span class="acc__from">от 52 000 ₽</span>
+                  <span class="acc__from">гигиена от 3 000 ₽</span>
                   <span class="acc__icon"></span>
                 </span>
               </button>
               <div class="acc__panel">
                 <div class="acc__inner">
                   <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
                     <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
                     <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
-                      Цифровое планирование по КЛКТ, установка по хирургическому
-                      шаблону, минимальная травматичность. Работаем с системами
-                      премиум- и эконом-сегмента — выбор за вами.
+                      Профессиональная комбинированная гигиена Air Flow и ультразвуком, глубокое фторирование, лечение дёсен, шинирование подвижных зубов и отбеливание ZOOM AP.
                     </p>
                   </div>
                   <div class="price-list">
                     <div class="price-row">
-                      <span class="price-row__name">Имплант премиум-класса «под ключ»</span>
+                      <span class="price-row__name">Реминерализующая терапия; Импрегнация (серебрение) 1 зуба</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 89 000 ₽</span>
+                      <span class="price-row__value">400 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Имплант эконом-класса «под ключ»</span>
+                      <span class="price-row__name">Глубокое фторирование зубов с применением капп - 2 челюсти</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 52 000 ₽</span>
+                      <span class="price-row__value">2 000 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Синус-лифтинг</span>
+                      <span class="price-row__name">Профессиональная комбинированная гигиена 1 зуба</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 38 000 ₽</span>
+                      <span class="price-row__value">600 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Костная пластика</span>
+                      <span class="price-row__name">Профессиональная комбинированная гигиена зубов 1 челюсти (Air Flow)</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 34 000 ₽</span>
+                      <span class="price-row__value">4 000 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">All-on-4, одна челюсть</span>
+                      <span class="price-row__name">Инъекция лекарства в пародонтальный карман; Лечебная повязка 1ед.</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 390 000 ₽</span>
+                      <span class="price-row__value">900 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Наложение оптрагейта / коффердама</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">650 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Наложение ретракционной нити; изолирующей матрицы 1 ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">300 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Отбеливание зубов ZOOM AP</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">20 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Шинирование зуба 1ед</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Профессиональная гигиена зубов 1 челюсти (ультрозвук)</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 000 ₽</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- ОРТОДОНТИЯ -->
-            <div class="acc__item" data-cat="orthodontics" id="orthodontics">
+            <div class="acc__item" data-cat="endo" id="endo">
               <button class="acc__head" type="button">
-                <span class="acc__title">Ортодонтия</span>
+                <span class="acc__title">Эндодонтия — лечение каналов</span>
                 <span class="acc__aside">
-                  <span class="acc__from">от 7 500 ₽</span>
+                  <span class="acc__from">канал от 2 400 ₽</span>
                   <span class="acc__icon"></span>
                 </span>
               </button>
               <div class="acc__panel">
                 <div class="acc__inner">
                   <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
                     <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
                     <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
-                      3D-сканирование вместо слепков и точный прогноз результата
-                      ещё до старта. Прозрачные элайнеры почти незаметны,
-                      контроль — раз в 6–8 недель, в том числе онлайн.
+                      Работа под микроскопом: механическая и медикаментозная обработка каналов, временное и постоянное пломбирование, распломбировка после прежнего лечения, извлечение отломков инструментов.
                     </p>
                   </div>
                   <div class="price-list">
                     <div class="price-row">
-                      <span class="price-row__name">Диагностика, 3D-скан и план</span>
+                      <span class="price-row__name">Наложение девитализирующей пасты</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">7 500 ₽</span>
+                      <span class="price-row__value">800 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Элайнеры, лёгкий случай</span>
+                      <span class="price-row__name">Пульпотомия (ампутация коронковой пульпы) временного зуба</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 190 000 ₽</span>
+                      <span class="price-row__value">900 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Элайнеры, полный курс</span>
+                      <span class="price-row__name">Ультразвуковое расширение 1 корневого канала зуба – «Эндочак»</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 320 000 ₽</span>
+                      <span class="price-row__value">1 500 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Металлические брекеты, 2 челюсти</span>
+                      <span class="price-row__name">Механическая и медикаментозная обработка 1 корневого канала - I прием</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 145 000 ₽</span>
+                      <span class="price-row__value">2 400 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Керамические брекеты, 2 челюсти</span>
+                      <span class="price-row__name">Механическая и медикаментозная обработка 1 корневого канала - II прием</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 210 000 ₽</span>
+                      <span class="price-row__value">900 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Временное пломбирование лечебной пастой 1 корневого канала</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Распломбировка (пасты или гуттаперчи) 1 корневого канала</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Распломбировка (цемента или резорцин-формалина) 1 корневого канала</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пломбирование устья канала временного зуба, форфенановым методом</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 100 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Постоянное пломбирование 1 корневого канала</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 900 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Закрытие перфорации стенки корневого канала зуба</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Извлечение инородного тела, штифта, инструмента, вкладки</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 500 ₽</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- ОРТОПЕДИЯ -->
-            <div class="acc__item" data-cat="prosthetics" id="prosthetics">
-              <button class="acc__head" type="button">
-                <span class="acc__title">Ортопедия и виниры</span>
-                <span class="acc__aside">
-                  <span class="acc__from">от 12 000 ₽</span>
-                  <span class="acc__icon"></span>
-                </span>
-              </button>
-              <div class="acc__panel">
-                <div class="acc__inner">
-                  <div>
-                    <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
-                    <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
-                      Собственная зуботехническая лаборатория и цифровой
-                      протокол: примерка результата в цифре, коронки из диоксида
-                      циркония и E.max, посадка без зазоров.
-                    </p>
-                  </div>
-                  <div class="price-list">
-                    <div class="price-row">
-                      <span class="price-row__name">Коронка из диоксида циркония</span>
-                      <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 38 000 ₽</span>
-                    </div>
-                    <div class="price-row">
-                      <span class="price-row__name">Керамический винир E.max</span>
-                      <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 46 000 ₽</span>
-                    </div>
-                    <div class="price-row">
-                      <span class="price-row__name">Культевая вкладка</span>
-                      <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 12 000 ₽</span>
-                    </div>
-                    <div class="price-row">
-                      <span class="price-row__name">Съёмный протез Acry-Free</span>
-                      <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 64 000 ₽</span>
-                    </div>
-                    <div class="price-row">
-                      <span class="price-row__name">Голливудская улыбка, 10 виниров</span>
-                      <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 420 000 ₽</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ХИРУРГИЯ -->
             <div class="acc__item" data-cat="surgery" id="surgery">
               <button class="acc__head" type="button">
                 <span class="acc__title">Хирургия</span>
                 <span class="acc__aside">
-                  <span class="acc__from">от 5 500 ₽</span>
+                  <span class="acc__from">удаление от 2 000 ₽</span>
                   <span class="acc__icon"></span>
                 </span>
               </button>
               <div class="acc__panel">
                 <div class="acc__inner">
                   <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
                     <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
                     <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
-                      Атравматичные протоколы, пьезохирургия и седация. Удаление
-                      восьмёрок, пластика уздечки, подготовка к имплантации — с
-                      контролем заживления и связью с врачом после приёма.
+                      Удаление зубов любой сложности, включая восьмёрки и ретинированные, цистэктомия, резекция верхушки корня, пластика десны и уздечек, лечение пародонта, работа с аутогенной мембраной из плазмы.
                     </p>
                   </div>
                   <div class="price-list">
                     <div class="price-row">
-                      <span class="price-row__name">Удаление зуба простое</span>
+                      <span class="price-row__name">Удаление временного (молочного); подвижного; фрактуры зуба- простое</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 5 500 ₽</span>
+                      <span class="price-row__value">2 000 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Удаление зуба мудрости</span>
+                      <span class="price-row__name">Удаление временного (молочного) зуба - сложное</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 14 000 ₽</span>
+                      <span class="price-row__value">2 500 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Лечение во сне (седация), час</span>
+                      <span class="price-row__name">Удаление постоянного зуба; имплантата - простое</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 24 000 ₽</span>
+                      <span class="price-row__value">4 500 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Пластика уздечки лазером</span>
+                      <span class="price-row__name">Удаление постоянного зуба - сложное</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 11 000 ₽</span>
+                      <span class="price-row__value">7 000 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Лечение пародонтита, Vector</span>
+                      <span class="price-row__name">Удаление постоянного зуба с разъединением корней; имплантата - сложное</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 16 500 ₽</span>
+                      <span class="price-row__value">8 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Удаление 8-го зуба – простое</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">8 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Удаление 8-го зуба – сложное</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Удаление дистопированного зуба с разъединением корней или зачатка зуба</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">18 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Удаление ретинированного 8-го зуба с пластикой кости</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">25 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Операция удаление имплантата с остеотомией</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">14 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Лечение перикоронита (иссечение капюшона)</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Остеотомия – экзостоза; создание костного окна при фиксации брекета</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Цистэктомия кисты, иссечение свища</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">6 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Резекция верхушки корня</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">15 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Гемисекция1 зуба; создание «искусственной» шейки зуба</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Гингивэктомия; коагуляция десны; иссечение тяжа уздечки языка, губы</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Открытый кюретаж при заболеваниях пародонта в области 1 зуба</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Кюретаж лунки зуба; смена дренажа;</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Лоскутная операция при закрытии рецессии в области 1 зуба</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">9 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пластика десны, уздечки вер. губы / ниж. губы / языка / вестибулопластика</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">7 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Забор кости скребком; трепаном</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">12 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Забор небного трансплантата</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">9 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Остановка кровотечения гемостатическим материалом</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Применение препарата: йодоформ, Alvogyl, Neocones, Альвостаз, Коллапан</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Вскрытие абсцесса, разрез, иссечение ретенционной кисты, фибромы</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">5 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Внутримышечное введение лекарственных препаратов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">400 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Внутривенное введение лекарственных препаратов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Взятие крови из периферической вены</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Изготовление аутогенной мембраны (плазмы)</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Наложение шовной нити - кетгут, викрил</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Наложение шовной нити - пролен</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">4 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Снятие швов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">500 ₽</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- ДЕТЯМ -->
-            <div class="acc__item" data-cat="kids" id="kids">
+            <div class="acc__item" data-cat="implants" id="implants">
               <button class="acc__head" type="button">
-                <span class="acc__title">Детская стоматология</span>
+                <span class="acc__title">Имплантация</span>
                 <span class="acc__aside">
-                  <span class="acc__from">от 2 400 ₽</span>
+                  <span class="acc__from">имплант от 45 000 ₽</span>
                   <span class="acc__icon"></span>
                 </span>
               </button>
               <div class="acc__panel">
                 <div class="acc__inner">
                   <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
                     <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
                     <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
-                      Отдельная детская зона, врачи с детской специализацией и
-                      адаптационные приёмы, на которых ребёнок просто знакомится
-                      с кабинетом. Лечим в игре, при необходимости — под
-                      седацией.
+                      Системы NeoBiotech и Osstem (Корея), Nobel Biocare и BICON (США). Синус-лифтинг, пластика альвеолярного отростка, протоколы All-on-4 и All-on-6 с временными протезами «под ключ». Стоимость самого имплантата — в разделе «Расходные материалы».
                     </p>
                   </div>
                   <div class="price-list">
                     <div class="price-row">
-                      <span class="price-row__name">Адаптационный приём</span>
+                      <span class="price-row__name">Установка имплантата</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">35 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Установка мини имплантата</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">30 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Установка ортодонтического имплантата / Брекета на ретинированный зуб</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">15 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Установка формирователя десны на имплантат</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">5 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Синус-лифтинг – открытый или закрытый в области 2-х зубов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">50 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Апикальная хирургия с ретроградной пломбировкой 1 канала зуба</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">30 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пластика альвеолярного отростка</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">20 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пластика редукция альвеолярного гребня</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Пластика перфорации верхнечелюстной пазухи</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Имплантация «All-on-4» NeoBiotech с времен. протезами «под ключ»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">250 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Имплантация «All-on-6» NeoBiotech с времен. протезами «под ключ»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">350 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Имплантация «All-on-4»Nobel Biocare с времен. протезами «под ключ»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">370 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Имплантация «All-on-6»Nobel Biocare с времен. протезами «под ключ»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">460 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc__item" data-cat="prosthetics" id="prosthetics">
+              <button class="acc__head" type="button">
+                <span class="acc__title">Протезирование</span>
+                <span class="acc__aside">
+                  <span class="acc__from">коронка от 17 000 ₽</span>
+                  <span class="acc__icon"></span>
+                </span>
+              </button>
+              <div class="acc__panel">
+                <div class="acc__inner">
+                  <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
+                    <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
+                    <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
+                      Цифровой протокол: внутриротовое сканирование, моделировка Wax-Up, 3D-модель и печать CAD/CAM. Коронки металлокерамические, E.max и из диоксида циркония, вкладки, съёмные и бюгельные протезы.
+                    </p>
+                  </div>
+                  <div class="price-list">
+                    <div class="price-row">
+                      <span class="price-row__name">Оттиск с массой из альгината</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Оттиск с массой из С-силикона</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Оттиск с массой из А-силикона</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Внутриротовое цифровое сканирование 1-ой челюсти</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">6 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Индивидуальная ложка; гипсовая модель</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Регистратор прикуса - жесткий силикон</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Регистратор прикуса – силикон; Силиконовый ключ</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">900 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Моделировка из воска Wax-Up на 3D модели CAD / CAM - 1 зуба</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Восковой валик для определения прикуса 1 челюсти</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">900 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">3D модель CAD / CAM и печать – 1 челюсти</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">5 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Определение вида смыкания зубных рядов с помощью лицевой дуги</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Литая вкладка культевая; телескопический колпачок</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">12 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Коронка временная клиническая</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Коронка временная CAD/CAM на зуб</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">7 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Коронка временная CAD/CAM на имплантате</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">9 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Коронка металлокерамическая</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">17 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Керамическая десна или плечевая масса</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 800 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">E.max - вкладка, накладка</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">18 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">E.max - коронка – метод нанесения</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">25 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">ZrO2 коронка на зуб – полная анатомия</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">25 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">ZrO2 коронка на зуб – метод нанесения</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">29 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">ZrO2 коронка на титановом основании – полная анатомия</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">30 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">ZrO2 коронка на титановом основании – метод нанесения</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">35 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">ZrO2 абатмент индивидуальный на титановом основании</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">11 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Снятие коронки стальной</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">5 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Снятие коронки с имплантата / металлокерамической</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">7 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Извлечение сломанного винта из тела имплантата</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">8 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Фиксация коронки на временный цемент 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Фиксация коронки МК, ZrO2 на постоянный цемент 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Фиксация коронки E.max на постоянный цемент 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Каппа окклюзионная лечебная</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">6 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Съемный акриловый пластиночный протез</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">35 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Съемный акриловый пластиночный протез с мягким основанием</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">40 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Бюгельный протез – с кламмерной фиксацией</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">65 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Бюгельный протез – кламмерный; замковый «Премиум»; на телескопах</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">75 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Съемный протез из Нейлона / Ацетала/ Акрифри</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">60 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Иммедиат-протез из Акрила</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">25 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Иммедиат-протез из Нейлона / Ацетала / Акрифри</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">30 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Починка, перебазировка, мягкий базис, кламмера, сетки, орт.пластинки</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Приварка зуба, замена матрицы в замке бюгельного протеза</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">8 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Коррекция, очистка, полировка, разрез мостовидного протеза</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc__item" data-cat="prosthetics" id="aesthetics">
+              <button class="acc__head" type="button">
+                <span class="acc__title">Эстетическое протезирование</span>
+                <span class="acc__aside">
+                  <span class="acc__from">винир от 75 000 ₽</span>
+                  <span class="acc__icon"></span>
+                </span>
+              </button>
+              <div class="acc__panel">
+                <div class="acc__inner">
+                  <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
+                    <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
+                    <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
+                      Виниры и накладки E.max, коронки ZrO2 премиального исполнения, съёмные протезы «Премиум», несъёмные конструкции на имплантатах All-on-4 и All-on-6 с титановой или карбоновой балкой.
+                    </p>
+                  </div>
+                  <div class="price-list">
+                    <div class="price-row">
+                      <span class="price-row__name">E.max, Винир, Накладка, ZrO2 коронка зуб или имплантат</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">75 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Съемный эстетический протез «Премиум»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">85 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Акриловый протез «All-on-4 (6)» с винтовой фиксацией на балке</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">300 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Акриловый протез «All-on-4 (6)» «Breden» - замковый на балке</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">350 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">МК дуга с титановой балкой на 4-х имплантатах</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">400 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">МК дуга с титановой балкой на 6-ти имплантатах</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">450 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Протез ZrO2 дуга с титановой балкой «All-on-4» имплантатах</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">600 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Протез ZrO2 дуга с титановой балкой «All-on-6» имплантатах</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">700 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Титановая или карбоновая балка «All-on-4 (6)» имплантатах</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">150 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Протез временный CAD/CAM фрезерованный из пластмассы «All-on-4(6)»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">100 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Коронка временная CAD/CAM на зубе или на имплантате</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">25 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc__item" data-cat="orthodontics" id="orthodontics">
+              <button class="acc__head" type="button">
+                <span class="acc__title">Ортодонтия</span>
+                <span class="acc__aside">
+                  <span class="acc__from">брекеты от 40 000 ₽</span>
+                  <span class="acc__icon"></span>
+                </span>
+              </button>
+              <div class="acc__panel">
+                <div class="acc__inner">
+                  <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
+                    <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
+                    <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
+                      Брекет-системы четырёх степеней сложности, элайнеры и лечение по методу «Еврокаппа» с 3D-планированием, съёмные пластинки и аппараты, ретейнеры и ретенционные каппы. Сами брекеты оплачиваются отдельно — в разделе «Расходные материалы».
+                    </p>
+                  </div>
+                  <div class="price-list">
+                    <div class="price-row">
+                      <span class="price-row__name">Прием врача-ортодонта с консультацией - первичный</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Описание рентгенографических изображений ТРГ 1снимок</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 200 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Аппарат - «Пластинка с дополнительными элементами»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">27 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Аппарат ретенционный – пластинка</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">20 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Аппарат - «Френкеля» / Двухчелюстной аппарат-активатор</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">50 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Аппарат – «Дорихсвайлера»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">52 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Брекет-система – I степень сложности</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">40 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Брекет-система – II степень сложности</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">80 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Брекет-система –III степень сложности</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">95 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Брекет-система – IV степень сложности</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">140 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ретейнер в области 1зуба</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">2 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Съемный ретейнер-каппа (повторная)</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">6 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Элайнер</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">12 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Установка небного бюгеля</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">11 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Снятие брекет-системы или ретейнера с 1 челюсти</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">6 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Коррекция, активация ортодонтических аппаратов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 300 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Фиксация 1-ого брекета</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Лечение по методу «Еврокаппа»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">160 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">3D диагностика и планирование лечения по методу «Еврокапп»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">12 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Каппа ретенционная ортодонтическая</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">13 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc__item" data-cat="diagnostics" id="diagnostics">
+              <button class="acc__head" type="button">
+                <span class="acc__title">Консультация, диагностика и анестезия</span>
+                <span class="acc__aside">
+                  <span class="acc__from">осмотр бесплатно</span>
+                  <span class="acc__icon"></span>
+                </span>
+              </button>
+              <div class="acc__panel">
+                <div class="acc__inner">
+                  <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
+                    <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
+                    <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
+                      Осмотр и консультация — бесплатно. Прицельные снимки, ортопантомография и компьютерная томография челюстно-лицевой области, развёрнутый план лечения с фотопротоколом, аппликационная и инъекционная анестезия.
+                    </p>
+                  </div>
+                  <div class="price-list">
+                    <div class="price-row">
+                      <span class="price-row__name">Осмотр и консультация</span>
                       <span class="price-row__dots"></span>
                       <span class="price-row__value">бесплатно</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Лечение кариеса молочного зуба</span>
+                      <span class="price-row__name">Прием пациента</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 5 400 ₽</span>
+                      <span class="price-row__value">200 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Герметизация фиссур, 1 зуб</span>
+                      <span class="price-row__name">Справка о санации полости рта</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">3 200 ₽</span>
+                      <span class="price-row__value">500 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Детская профгигиена</span>
+                      <span class="price-row__name">Радиовизиография (прицельный снимок)</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">4 900 ₽</span>
+                      <span class="price-row__value">500 ₽</span>
                     </div>
                     <div class="price-row">
-                      <span class="price-row__name">Серебрение / фторирование</span>
+                      <span class="price-row__name">Ортопантомография</span>
                       <span class="price-row__dots"></span>
-                      <span class="price-row__value">от 2 400 ₽</span>
+                      <span class="price-row__value">1 100 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Компьютерная томография челюстно-лицевой области</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Исследование и лечение под микроскопом (доплата)</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">3 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">План лечения, фотопротокол, диагностические модели</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">5 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Аппликационная</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">200 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Инъекция - 1 карпула</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc__item" data-cat="materials" id="materials">
+              <button class="acc__head" type="button">
+                <span class="acc__title">Расходные материалы</span>
+                <span class="acc__aside">
+                  <span class="acc__from">имплантат от 10 000 ₽</span>
+                  <span class="acc__icon"></span>
+                </span>
+              </button>
+              <div class="acc__panel">
+                <div class="acc__inner">
+                  <div>
+                    <!-- ПЛЕЙСХОЛДЕР: фото направления -->
+                    <div class="ph ph--soft" data-ph="Фото · 700×520"></div>
+                    <p class="muted" style="margin-top: 18px; font-size: 0.95rem">
+                      Имплантаты, абатменты, костные материалы и мембраны, навигационные шаблоны, наборы брекетов и ортодонтическая фурнитура. На позиции этого раздела скидки и акции не распространяются, а стоимость импортных материалов зависит от курса валют.
+                    </p>
+                  </div>
+                  <div class="price-list">
+                    <div class="price-row">
+                      <span class="price-row__name">Имплантат NeoBiotech (Корея); Osstem (Корея) 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Имплантат Nobel Biocare (США); «BICON» (США) 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">27 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Имплантат мини под условно-съемный протез 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Абатмент – мультиюнит или индивидуальный; болл-аттачмент 1 ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Опора десневая Карапетяна К.Л.; Внутрислизистый имплантат 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">4 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Фурнитура композитных зубов на 1 челюсть «TRIBOS»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Костный материал Botiss Cerabone 0.5-1.0 1.0 мл</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">13 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Костный материал Botiss Cerabone 0.5-1.0 2.0 мл</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">19 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Коллапан 0.5 мл</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Мембрана нерезорбируемая Cytoplast на область 5-6 зубов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">30 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Мембрана резорбируемая Jason membrane 20 х 30 мм</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">19 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Мембрана резорбируемая Jason membrane 30 x 40 мм</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">28 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Винт для фиксации костного блока или мембраны</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Навигационный шаблон</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">12 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Навигац-ный шаблон кейс All-on-4 (6)» с времен-ми коронками</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">95 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Навигац-ный шаблон кейс All-on-4 (6)» с времен-ми коронками –«мастер»</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">150 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Доплата за техническую высокоэстетическую работу ( Е.max, ZrO2) 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">5 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Гель для отбеливания зубов ZOOM AP США</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">35 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Небный бюгель</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">4 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический воск</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">600 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтическая щетка</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">800 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор сапфировых, композитных брекетов на 2 челюсти</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">42 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор сапфировых брекетов на 1 челюсть</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">25 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор сапфировых, композитных брекетов - 4 брекета</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">13 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор сапфировых, композитных брекетов - 6 брекетов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">17 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор сапфировых, композитных брекетов - 8 брекетов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">21 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор с металлическими брекетами на 2 челюсти</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">28 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор металлических брекетов на 1 челюсть</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">17 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор металлических брекетов - 4 брекета</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">10 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор металлических брекетов - 6 брекетов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">12 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтический набор металлических брекетов - 8 брекетов</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">14 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Винт Бертони, 1 ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 500 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Металлический брекет 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Сапфировый брекет 1 ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">1 200 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Кольцо ортодонтические 1ед.</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">800 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Ортодонтическая дуга</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">600 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Кейс до 25 капп</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">140 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Кейс от 25 капп</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">170 000 ₽</span>
+                    </div>
+                    <div class="price-row">
+                      <span class="price-row__name">Контейнер для съемного протеза</span>
+                      <span class="price-row__dots"></span>
+                      <span class="price-row__value">450 ₽</span>
                     </div>
                   </div>
                 </div>
@@ -514,18 +1469,19 @@
               </h2>
             </div>
             <p class="lead" data-anim="up">
-              Помогаем распределить бюджет и вернуть часть суммы через налоговый
-              вычет — документы готовим сами.
+              Помогаем распределить бюджет: скидки для семьи, поэтапная оплата и
+              возврат части суммы через налоговый вычет.
             </p>
           </div>
 
           <div class="grid grid--3">
             <div class="feature" data-anim="up">
               <span class="feature__num">01</span>
-              <h3 class="feature__title">Рассрочка 0%</h3>
+              <h3 class="feature__title">Семейные скидки</h3>
               <p class="feature__text">
-                До 12 месяцев без переплаты от банков-партнёров. Оформление
-                прямо в клинике за 15 минут.
+                Клиника работает по системе скидок и акций для всей семьи.
+                Уточняйте действующие условия у администратора: на расходные
+                материалы скидки не распространяются.
               </p>
             </div>
             <div class="feature" data-anim="up" style="--delay: 0.08s">
@@ -567,9 +1523,47 @@
               <div class="acc__panel">
                 <div class="acc__inner" style="grid-template-columns: 1fr">
                   <p class="muted">
-                    Консультация с осмотром и планом лечения — бесплатно.
-                    3D-снимок, если он нужен, оплачивается отдельно и остаётся у
-                    вас на руках.
+                    Осмотр и консультация — бесплатно. Снимки оплачиваются
+                    отдельно и остаются у вас: прицельный — 500 ₽,
+                    ортопантомограмма — 1 100 ₽, компьютерная томография —
+                    3 500 ₽. Развёрнутый план лечения с фотопротоколом и
+                    диагностическими моделями — 5 000 ₽.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc__item">
+              <button class="acc__head" type="button">
+                <span class="acc__title">Из чего складывается стоимость имплантации?</span>
+                <span class="acc__aside"><span class="acc__icon"></span></span>
+              </button>
+              <div class="acc__panel">
+                <div class="acc__inner" style="grid-template-columns: 1fr">
+                  <p class="muted">
+                    Установка имплантата — 35 000 ₽, сам имплантат оплачивается
+                    отдельно: NeoBiotech или Osstem — 10 000 ₽, Nobel Biocare
+                    или BICON — 27 000 ₽. Дальше формирователь десны — 5 000 ₽
+                    и коронка на имплантате — от 25 000 ₽. Итоговую сумму по
+                    вашему случаю фиксируем в смете до начала лечения.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc__item">
+              <button class="acc__head" type="button">
+                <span class="acc__title">На что распространяются скидки?</span>
+                <span class="acc__aside"><span class="acc__icon"></span></span>
+              </button>
+              <div class="acc__panel">
+                <div class="acc__inner" style="grid-template-columns: 1fr">
+                  <p class="muted">
+                    Скидки и акции действуют на медицинские услуги. Исключение —
+                    расходные материалы: имплантаты, костные материалы,
+                    мембраны, наборы брекетов. На них скидки не
+                    распространяются, а стоимость импортных позиций может
+                    меняться вслед за курсом валют.
                   </p>
                 </div>
               </div>
@@ -584,13 +1578,15 @@
                 <div class="acc__inner" style="grid-template-columns: 1fr">
                   <p class="muted">
                     Скажите об этом администратору при записи. Мы заложим больше
-                    времени на приём, начнём с разговора без инструментов, при
-                    необходимости предложим седацию или лечение во сне.
+                    времени на приём и начнём с разговора без инструментов.
+                    Перед инъекцией делаем аппликационную анестезию, чтобы вы не
+                    почувствовали укол.
                   </p>
                 </div>
               </div>
             </div>
 
+            <!-- УТОЧНИТЬ У КЛИНИКИ: подтвердить приём с острой болью в день обращения -->
             <div class="acc__item">
               <button class="acc__head" type="button">
                 <span class="acc__title">Принимаете ли вы с острой болью?</span>
@@ -602,22 +1598,6 @@
                     Да, ежедневно оставляем окна под неотложные приёмы.
                     Позвоните — в большинстве случаев принимаем в день
                     обращения.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="acc__item">
-              <button class="acc__head" type="button">
-                <span class="acc__title">Какая гарантия на лечение?</span>
-                <span class="acc__aside"><span class="acc__icon"></span></span>
-              </button>
-              <div class="acc__panel">
-                <div class="acc__inner" style="grid-template-columns: 1fr">
-                  <p class="muted">
-                    До 5 лет на терапевтические и ортопедические работы при
-                    соблюдении графика профосмотров, пожизненная гарантия
-                    производителя — на импланты.
                   </p>
                 </div>
               </div>
@@ -672,12 +1652,12 @@
                 <div class="field form__full">
                   <label for="s-service">Интересует</label>
                   <select id="s-service" name="service">
-                    <option>Терапия</option>
-                    <option>Имплантация</option>
-                    <option>Ортодонтия</option>
-                    <option>Ортопедия и виниры</option>
+                    <option>Терапия и профилактика</option>
+                    <option>Лечение каналов</option>
                     <option>Хирургия</option>
-                    <option>Детская стоматология</option>
+                    <option>Имплантация</option>
+                    <option>Протезирование и виниры</option>
+                    <option>Ортодонтия</option>
                   </select>
                 </div>
                 <div class="form__full">
@@ -730,11 +1710,12 @@
           <div>
             <p class="footer__title">Услуги</p>
             <ul class="footer__list">
-              <li><a href="services.html#therapy">Терапия</a></li>
+              <li><a href="services.html#therapy">Терапия и профилактика</a></li>
+              <li><a href="services.html#endo">Лечение каналов</a></li>
+              <li><a href="services.html#surgery">Хирургия</a></li>
               <li><a href="services.html#implants">Имплантация</a></li>
+              <li><a href="services.html#prosthetics">Протезирование</a></li>
               <li><a href="services.html#orthodontics">Ортодонтия</a></li>
-              <li><a href="services.html#prosthetics">Ортопедия</a></li>
-              <li><a href="services.html#kids">Детская стоматология</a></li>
             </ul>
           </div>
 
