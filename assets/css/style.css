@@ -1176,19 +1176,6 @@ body.is-locked .header__phone--second {
   border-radius: var(--radius-lg);
 }
 
-.card__price {
-  position: absolute;
-  right: 14px;
-  top: 14px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(6px);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
 .card__body {
   display: grid;
   gap: 12px;
