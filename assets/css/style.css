@@ -1936,6 +1936,13 @@ body.is-locked .header__phone--second {
   transform: translateY(-2px);
 }
 
+.msg--max:hover {
+  background: #7b61ff;
+  border-color: #7b61ff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .msg--mail:hover {
   background: var(--gold);
   border-color: var(--gold);
