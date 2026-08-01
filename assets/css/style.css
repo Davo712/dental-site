@@ -628,14 +628,15 @@ body.is-locked .header__phone {
 
 .header__phone {
   font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  font-size: 1.22rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 /* второй номер тише основного, чтобы шапка не выглядела перегруженной */
 .header__phone--second {
   font-weight: 500;
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   color: var(--ink-mute);
 }
 
@@ -1359,13 +1360,18 @@ body.is-locked .header__phone--second {
   border-radius: var(--radius-lg);
 }
 
-.doctor__media .ph {
+.doctor__media .ph,
+.doctor__media img {
   --ph-ratio: 3 / 4;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
   border: 0;
   transition: transform 0.9s var(--ease), filter 0.9s var(--ease);
 }
 
-.doctor:hover .doctor__media .ph {
+.doctor:hover .doctor__media .ph,
+.doctor:hover .doctor__media img {
   transform: scale(1.05);
 }
 
@@ -1401,11 +1407,6 @@ body.is-locked .header__phone--second {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--gold-text);
-}
-
-.doctor__bio {
-  font-size: 0.92rem;
-  color: var(--ink-mute);
 }
 
 /* --------------------------------------------------------------------------
