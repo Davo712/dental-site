@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 
-# ПЛЕЙСХОЛДЕР: заменить example.ru на реальный домен
-Sitemap: https://example.ru/sitemap.xml
-Host: https://example.ru
+Sitemap: https://emalius.com/sitemap.xml
+Host: https://emalius.com
