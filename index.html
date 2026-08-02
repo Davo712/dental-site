@@ -198,10 +198,6 @@
                 <b><span data-field="stat-patients" data-count="12400" data-count-suffix="+">0</span></b>
                 <span>вылеченных пациентов</span>
               </div>
-              <div class="hero__fact">
-                <b><span data-field="stat-doctors" data-count="9">0</span></b>
-                <span>врачей в команде</span>
-              </div>
             </div>
           </div>
 
@@ -246,7 +242,7 @@
 
           <!-- ПЛЕЙСХОЛДЕРЫ: цифры не подтверждены клиникой, заменить на реальные -->
 
-          <div class="grid grid--4">
+          <div class="grid grid--3 stats--center">
             <div class="stat" data-anim="up">
               <span class="stat__num"><span data-count="14">0</span></span>
               <span class="stat__label">лет клиника принимает пациентов</span>
@@ -256,10 +252,6 @@
               <span class="stat__label">пациентов прошли лечение</span>
             </div>
             <div class="stat" data-anim="up" style="--delay: 0.16s">
-              <span class="stat__num"><span data-count="9">0</span></span>
-              <span class="stat__label">врачей с опытом от 8 лет</span>
-            </div>
-            <div class="stat" data-anim="up" style="--delay: 0.24s">
               <span class="stat__num"><span data-count="98" data-count-suffix="%">0</span></span>
               <span class="stat__label">пациентов возвращаются и рекомендуют</span>
             </div>
@@ -590,10 +582,6 @@
               </div>
             </article>
           </div>
-
-          <div style="margin-top: 44px" data-anim="up">
-            <a class="btn btn--ghost" href="contacts.html#team">Вся команда</a>
-          </div>
         </div>
       </section>
 
@@ -607,56 +595,76 @@
                 Что говорят <em>пациенты</em>
               </h2>
             </div>
+            <p class="lead" data-anim="up" style="color: rgba(186, 189, 196, 0.85)">
+              Отзывы с Яндекс.Карт о работе наших врачей.
+            </p>
           </div>
 
           <div class="reviews__viewport">
             <div class="reviews__track">
-              <blockquote class="review">
+                            <blockquote class="review">
                 <span class="review__mark">“</span>
                 <p class="review__quote">
-                  Пришла с «зуб надо удалять» из другой клиники. Здесь
-                  перелечили каналы — зуб на месте третий год. Всё объяснили и
-                  показали снимки.
+                  Ну вот и закончился мой долгий путь к красивой улыбке. Хочу поблагодарить замечательного доктора Мкртчяна Айка Арменовича за его труд, профессионализм и терпение. Ни разу не пожалела, что пошла к этому доктору. Лучший врач-имплантолог!
                 </p>
                 <footer class="review__meta">
-                  <span class="review__name" data-field="review-author">Имя пациента</span>
-                  <span class="review__service">Терапия</span>
+                  <span class="review__name" data-field="review-author">Марина Мищук</span>
+                  <span class="review__service">Имплантация · 26 мая 2025</span>
                 </footer>
               </blockquote>
 
               <blockquote class="review">
                 <span class="review__mark">“</span>
                 <p class="review__quote">
-                  Поставил два импланта NeoBiotech. Всё посчитали заранее:
-                  установка, сам имплант, коронка. Никаких сюрпризов в конце.
+                  Долго думал: осталось несколько зубов, носил съёмные протезы, твёрдую пищу ел с трудом. Обратился к Айку Арменовичу Мкртчяну — сделали две челюсти на 11 имплантов… И вот прошёл год. Ем всё. Жалею, что раньше не обратился.
                 </p>
                 <footer class="review__meta">
-                  <span class="review__name" data-field="review-author">Имя пациента</span>
-                  <span class="review__service">Имплантация</span>
+                  <span class="review__name" data-field="review-author">К. Е.</span>
+                  <span class="review__service">Имплантация · 20 августа 2025</span>
                 </footer>
               </blockquote>
 
               <blockquote class="review">
                 <span class="review__mark">“</span>
                 <p class="review__quote">
-                  Делала гигиену и отбеливание. Показали смету до начала, по
-                  итогу вышло ровно в неё. Приятно, когда цифры не меняются.
+                  Была на приёме у Айка Арменовича, сделал удаление 6-го зуба. Удалил быстро и поставил имплант в этот же приём. Осталась очень довольна. Благодарю за чуткость и хорошее отношение.
                 </p>
                 <footer class="review__meta">
-                  <span class="review__name" data-field="review-author">Имя пациента</span>
-                  <span class="review__service">Профгигиена</span>
+                  <span class="review__name" data-field="review-author">Лилит Лапоян</span>
+                  <span class="review__service">Хирургия и имплантация · 19 июня</span>
                 </footer>
               </blockquote>
 
               <blockquote class="review">
                 <span class="review__mark">“</span>
                 <p class="review__quote">
-                  Год на элайнерах, контроль почти весь онлайн. Результат совпал
-                  с 3D-планом, который показали на первом приёме.
+                  Удаляла сложный зуб у Айка Арменовича, корни оказались проблемные. Врач предупредил заранее, попросил не переживать. Работал уверенно, без суеты. Во время процедуры боли не было. После заживления осложнений не возникло. Осталась довольна.
                 </p>
                 <footer class="review__meta">
-                  <span class="review__name" data-field="review-author">Имя пациента</span>
-                  <span class="review__service">Ортодонтия</span>
+                  <span class="review__name" data-field="review-author">Диано Сафино</span>
+                  <span class="review__service">Хирургия · 6 апреля</span>
+                </footer>
+              </blockquote>
+
+              <blockquote class="review">
+                <span class="review__mark">“</span>
+                <p class="review__quote">
+                  Обратилась к Айку Арменовичу с острой болью. Приняли в тот же день. После осмотра стало понятно, что зуб не спасти. Удаление прошло быстро. Облегчение почувствовала почти сразу. Спасибо за оперативность.
+                </p>
+                <footer class="review__meta">
+                  <span class="review__name" data-field="review-author">Екатерина Перминова</span>
+                  <span class="review__service">Неотложная помощь · 16 марта</span>
+                </footer>
+              </blockquote>
+
+              <blockquote class="review">
+                <span class="review__mark">“</span>
+                <p class="review__quote">
+                  Обращалась к Айку Арменовичу по поводу коронки после удаления. Всё объяснил на консультации. Никакой спешки не было. Работу выполнил аккуратно. Коронка не мешает. Спасибо за внимательность.
+                </p>
+                <footer class="review__meta">
+                  <span class="review__name" data-field="review-author">Дарина Т.</span>
+                  <span class="review__service">Протезирование · 18 мая</span>
                 </footer>
               </blockquote>
             </div>
