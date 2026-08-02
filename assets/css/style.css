@@ -956,9 +956,17 @@ body.is-locked .header__phone--second {
   position: relative;
 }
 
-.hero__media .ph {
+.hero__media .ph,
+.hero__media img {
   --ph-ratio: 4 / 5;
   border-radius: 260px 260px var(--radius-lg) var(--radius-lg);
+}
+
+.hero__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
 }
 
 .hero__badge {
