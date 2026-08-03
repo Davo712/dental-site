@@ -2136,6 +2136,52 @@ body.is-locked .header__phone--second {
   color: rgba(186, 189, 196, 0.7);
 }
 
+/* --------------------------------------------------------------------------
+   Страница 404
+   -------------------------------------------------------------------------- */
+.notfound {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - var(--header-h) - 120px);
+  background: linear-gradient(180deg, var(--cream), var(--paper) 62%);
+}
+
+.notfound__inner {
+  max-width: 720px;
+  text-align: center;
+}
+
+.notfound__title {
+  margin: 20px 0 22px;
+}
+
+.notfound__lead {
+  margin-inline: auto;
+}
+
+.notfound__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.notfound__phone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 26px;
+  margin-top: 34px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.notfound__phone a:hover {
+  color: var(--gold-text);
+}
+
 /* Кнопка «наверх» */
 .to-top {
   position: fixed;
