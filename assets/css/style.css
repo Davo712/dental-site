@@ -2183,6 +2183,65 @@ body.is-locked .header__phone--second {
 }
 
 /* Кнопка «наверх» */
+/* --------------------------------------------------------------------------
+   Уведомление о cookie
+   -------------------------------------------------------------------------- */
+.cookie {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 120;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+  max-width: 940px;
+  margin-inline: auto;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  box-shadow: 0 26px 60px -28px rgba(3, 2, 2, 0.45);
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.cookie.is-shown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cookie__text {
+  flex: 1 1 380px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ink-mute);
+}
+
+.cookie__ok {
+  flex: 0 0 auto;
+}
+
+/* чтобы кнопка «наверх» не наезжала на плашку */
+body.has-cookie .to-top {
+  bottom: 108px;
+}
+
+@media (min-width: 700px) {
+  body.has-cookie .to-top {
+    bottom: 96px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie {
+    transition: none;
+  }
+}
+
 .to-top {
   position: fixed;
   right: 22px;
@@ -2199,7 +2258,7 @@ body.is-locked .header__phone--second {
   transform: translateY(20px) scale(0.9);
   pointer-events: none;
   transition: opacity 0.45s var(--ease), transform 0.45s var(--ease),
-    background 0.4s var(--ease);
+    background 0.4s var(--ease), bottom 0.4s var(--ease);
 }
 
 .to-top.is-visible {

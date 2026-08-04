@@ -515,8 +515,47 @@
   }
 
   /* ---------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------
+     Уведомление о cookie. Показываем один раз: выбор храним в localStorage.
+     Если хранилище недоступно (строгие настройки приватности, file://),
+     плашка просто появится снова — сайту это не мешает.
+     ---------------------------------------------------------------------- */
+  function initCookieNotice() {
+    var bar = $(".cookie");
+    if (!bar) return;
+
+    var KEY = "emalius:cookie-notice";
+    var seen = null;
+    try {
+      seen = window.localStorage.getItem(KEY);
+    } catch (e) {}
+    if (seen === "1") return;
+
+    bar.hidden = false;
+    document.body.classList.add("has-cookie");
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
+        bar.classList.add("is-shown");
+      });
+    });
+
+    var ok = $(".cookie__ok", bar);
+    if (!ok) return;
+    ok.addEventListener("click", function () {
+      try {
+        window.localStorage.setItem(KEY, "1");
+      } catch (e) {}
+      bar.classList.remove("is-shown");
+      document.body.classList.remove("has-cookie");
+      window.setTimeout(function () {
+        bar.hidden = true;
+      }, reduceMotion ? 0 : 500);
+    });
+  }
+
   function init() {
     initLocalLinks();
+    initCookieNotice();
     initSplit();
     initCurtain();
     initHeader();
