@@ -2206,12 +2206,21 @@ body.is-locked .header__phone--second {
   box-shadow: 0 26px 60px -28px rgba(3, 2, 2, 0.45);
   opacity: 0;
   transform: translateY(18px);
+  /* пока плашка не показана, она не должна перехватывать клики */
+  pointer-events: none;
   transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+/* display: flex выше перебивает встроенное [hidden] { display: none },
+   поэтому скрываем явно — иначе невидимая плашка ловит клики */
+.cookie[hidden] {
+  display: none;
 }
 
 .cookie.is-shown {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .cookie__text {
