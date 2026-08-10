@@ -553,9 +553,95 @@
     });
   }
 
+  /* ----------------------------------------------------------------------
+     Подсказка внизу экрана
+     ---------------------------------------------------------------------- */
+  var toastTimer = null;
+
+  function showToast(text) {
+    var el = $(".toast");
+    if (!el) return;
+    el.textContent = text;
+    el.hidden = false;
+    window.clearTimeout(toastTimer);
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
+        el.classList.add("is-shown");
+      });
+    });
+    toastTimer = window.setTimeout(function () {
+      el.classList.remove("is-shown");
+      window.setTimeout(function () {
+        el.hidden = true;
+      }, reduceMotion ? 0 : 400);
+    }, 3200);
+  }
+
+  /* ----------------------------------------------------------------------
+     Ссылки на почту.
+     На компьютере почтовый клиент часто не назначен, и mailto: молча
+     не срабатывает. Поэтому адрес заодно копируем в буфер обмена и
+     показываем подсказку — посетитель в любом случае получит адрес.
+     На телефонах mailto: работает всегда, там ничего не меняем.
+     ---------------------------------------------------------------------- */
+  function initMailLinks() {
+    var links = $$('a[href^="mailto:"]');
+    if (!links.length) return;
+
+    var isTouch =
+      window.matchMedia("(hover: none), (pointer: coarse)").matches ||
+      "ontouchstart" in window;
+    if (isTouch) return;
+
+    /* запасной способ — нужен и когда Clipboard API нет,
+       и когда он есть, но отказал (нет фокуса, запрет в настройках) */
+    function copyLegacy(text) {
+      return new Promise(function (resolve, reject) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = false;
+        try {
+          ok = document.execCommand("copy");
+        } catch (e) {}
+        document.body.removeChild(ta);
+        ok ? resolve() : reject();
+      });
+    }
+
+    function copy(text) {
+      var modern =
+        navigator.clipboard && window.isSecureContext
+          ? navigator.clipboard.writeText(text)
+          : Promise.reject();
+      return modern.catch(function () {
+        return copyLegacy(text);
+      });
+    }
+
+    links.forEach(function (a) {
+      a.addEventListener("click", function () {
+        var mail = a.getAttribute("href").replace(/^mailto:/, "").split("?")[0];
+        copy(mail).then(
+          function () {
+            showToast("Адрес скопирован: " + mail);
+          },
+          function () {
+            showToast("Наша почта: " + mail);
+          }
+        );
+      });
+    });
+  }
+
   function init() {
     initLocalLinks();
     initCookieNotice();
+    initMailLinks();
     initSplit();
     initCurtain();
     initHeader();

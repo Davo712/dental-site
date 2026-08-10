@@ -2184,6 +2184,49 @@ body.is-locked .header__phone--second {
 
 /* Кнопка «наверх» */
 /* --------------------------------------------------------------------------
+   Всплывающая подсказка (например, «адрес почты скопирован»)
+   -------------------------------------------------------------------------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 26px;
+  z-index: 130;
+  max-width: min(92vw, 460px);
+  padding: 13px 20px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  box-shadow: 0 22px 50px -22px rgba(3, 2, 2, 0.7);
+  opacity: 0;
+  transform: translate(-50%, 14px);
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+.toast[hidden] {
+  display: none;
+}
+
+.toast.is-shown {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* когда внизу висит плашка cookie, подсказка поднимается над ней */
+body.has-cookie .toast {
+  bottom: 120px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Уведомление о cookie
    -------------------------------------------------------------------------- */
 .cookie {
