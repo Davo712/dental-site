@@ -952,13 +952,178 @@ body.is-locked .header__phone--second {
   color: var(--ink-mute);
 }
 
+/* Подзаголовок первого экрана: выгода */
+.hero__claim {
+  margin-top: clamp(18px, 2.4vw, 26px);
+  font-size: clamp(1.15rem, 1.9vw, 1.55rem);
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+
+.hero__claim b {
+  font-weight: 700;
+  color: var(--gold-deep);
+}
+
+/* Пояснение, за счёт чего дешевле */
+.hero__why {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: clamp(18px, 2.2vw, 24px);
+  padding: 14px 22px 14px 16px;
+  max-width: 30rem;
+  border: 1px solid rgba(212, 180, 131, 0.6);
+  border-radius: 999px;
+  background: rgba(252, 239, 224, 0.55);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.hero__why-icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Два бесплатных пункта */
+.hero__perks {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (min-width: 560px) {
+  .hero__perks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.perk {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  box-shadow: 0 18px 40px -34px rgba(3, 2, 2, 0.5);
+}
+
+.perk__icon {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  color: var(--gold-deep);
+}
+
+.perk__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.perk__text {
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--ink-mute);
+}
+
+.perk__text b {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+/* Адрес под кнопками */
+.hero__where {
+  margin-top: 22px;
+  font-size: 0.86rem;
+  color: var(--ink-mute);
+}
+
 .hero__media {
   position: relative;
 }
 
-.hero__media .ph {
+.hero__media .ph,
+.hero__media img {
   --ph-ratio: 4 / 5;
-  border-radius: 260px 260px var(--radius-lg) var(--radius-lg);
+  border-radius: var(--radius-lg);
+}
+
+.hero__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--paper);
+}
+
+/* Карточка врача поверх фото */
+.hero__doc {
+  position: absolute;
+  right: clamp(-10px, -1vw, 0px);
+  bottom: 26px;
+  width: clamp(210px, 24vw, 268px);
+  padding: 20px 22px;
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 64px -32px rgba(3, 2, 2, 0.55);
+}
+
+.hero__doc-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.hero__doc-role {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink-mute);
+}
+
+.hero__doc-exp {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink);
+  font-variant-numeric: lining-nums;
+}
+
+.hero__doc-exp b {
+  font-weight: 500;
+  color: var(--gold-deep);
+}
+
+@media (max-width: 559px) {
+  .hero__doc {
+    position: static;
+    width: auto;
+    margin-top: -34px;
+    margin-inline: 14px;
+    border: 1px solid var(--line);
+  }
+
+  /* на узких экранах подсказка «листайте» налезала на карточку врача */
+  .hero .scroll-hint {
+    display: none;
+  }
 }
 
 .hero__badge {

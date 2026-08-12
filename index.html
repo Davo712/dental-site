@@ -211,33 +211,67 @@
               Восстановите зубы <em>выгоднее</em>
             </h1>
 
-            <p class="lead" data-anim="up" style="--delay: 0.12s">
-              Москва, Митинская 44<br />
-              Всего 2 минуты пешком от метро Митино
+            <p class="hero__claim" data-anim="up" style="--delay: 0.1s">
+              <b>на 30% дешевле,</b><br />
+              чем в среднем по Москве
             </p>
 
-            <div class="hero__actions" data-anim="up" style="--delay: 0.2s">
+            <p class="hero__why" data-anim="up" style="--delay: 0.14s">
+              <span class="hero__why-icon" aria-hidden="true">₽</span>
+              За счёт собственного производства коронок и высокой
+              квалификации врачей
+            </p>
+
+            <ul class="hero__perks" data-anim="up" style="--delay: 0.18s">
+              <li class="perk">
+                <span class="perk__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="8" width="18" height="13" rx="2" />
+                    <path d="M3 12h18M12 8v13" />
+                    <path d="M12 8S9.5 3.5 7.2 4.4C5.6 5 5.7 7.6 8 8h4Zm0 0s2.5-4.5 4.8-3.6C18.4 5 18.3 7.6 16 8h-4Z" />
+                  </svg>
+                </span>
+                <span class="perk__text">Консультация <b>бесплатно</b></span>
+              </li>
+              <li class="perk">
+                <span class="perk__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 4.6c-1.5-1-3-1.4-4.4-1.1C5.3 4 4 6 4 8.7c0 2 .4 3.6.9 5.3.5 1.6.8 3.2 1 4.7.2 1.3.6 2.1 1.5 2.1 1 0 1.4-.9 1.8-2.6l.6-2.5c.3-1.1.7-1.7 2.2-1.7s1.9.6 2.2 1.7l.6 2.5c.4 1.7.8 2.6 1.8 2.6.9 0 1.3-.8 1.5-2.1.2-1.5.5-3.1 1-4.7.5-1.7.9-3.3.9-5.3 0-2.7-1.3-4.7-3.6-5.2-1.4-.3-2.9.1-4.4 1.1Z" />
+                  </svg>
+                </span>
+                <span class="perk__text">
+                  Перед имплантацией удаление подвижного зуба <b>бесплатно</b>
+                </span>
+              </li>
+            </ul>
+
+            <div class="hero__actions" data-anim="up" style="--delay: 0.24s">
               <a class="btn" href="#zapis">Записаться на приём</a>
               <a class="btn btn--ghost" href="services">Услуги и цены</a>
             </div>
 
-            <!-- ПЛЕЙСХОЛДЕРЫ: цифры не подтверждены клиникой, заменить на реальные -->
-            <div class="hero__facts" data-anim="up" style="--delay: 0.28s">
-              <div class="hero__fact">
-                <b><span data-field="stat-years" data-count="14">0</span></b>
-                <span>лет принимаем пациентов</span>
-              </div>
-              <div class="hero__fact">
-                <b><span data-field="stat-patients" data-count="12400" data-count-suffix="+">0</span></b>
-                <span>вылеченных пациентов</span>
-              </div>
-            </div>
+            <p class="hero__where" data-anim="up" style="--delay: 0.28s">
+              Москва, Митинская 44 — 2 минуты пешком от метро Митино
+            </p>
+
           </div>
 
           <div class="hero__media" data-anim="zoom" style="--delay: 0.15s">
-            <!-- ПЛЕЙСХОЛДЕР: главное фото (интерьер клиники / врач) -->
-            <div class="ph" data-ph="Главное фото · 900×1120"></div>
-
+            <img
+              src="assets/img/doctors/hero-head.jpg"
+              alt="Мкртчян Айк Арменович — главный врач стоматологии EMALIUS, хирург-имплантолог"
+              width="900"
+              height="1125"
+              fetchpriority="high"
+            />
+            <figure class="hero__doc">
+              <figcaption class="hero__doc-name">Мкртчян<br />Айк Арменович</figcaption>
+              <p class="hero__doc-role">
+                Хирург-имплантолог<br />
+                Врач высшей категории
+              </p>
+              <p class="hero__doc-exp">Стаж: <b>12 лет</b></p>
+            </figure>
           </div>
         </div>
 
