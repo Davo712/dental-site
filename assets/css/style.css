@@ -913,7 +913,7 @@ body.is-locked .header__phone--second {
 
 @media (min-width: 1000px) {
   .hero__grid {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1.4fr 0.6fr;
   }
 }
 
@@ -1053,6 +1053,11 @@ body.is-locked .header__phone--second {
 
 .hero__media {
   position: relative;
+  /* фото вспомогательное, а не главное — держим его скромнее и правее */
+  justify-self: end;
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
 }
 
 .hero__media .ph,
@@ -1066,64 +1071,8 @@ body.is-locked .header__phone--second {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: top center;
   background: var(--paper);
-}
-
-/* Карточка врача поверх фото */
-.hero__doc {
-  position: absolute;
-  right: clamp(-10px, -1vw, 0px);
-  bottom: 26px;
-  width: clamp(210px, 24vw, 268px);
-  padding: 20px 22px;
-  background: var(--paper);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 30px 64px -32px rgba(3, 2, 2, 0.55);
-}
-
-.hero__doc-name {
-  font-family: var(--font-display);
-  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
-  line-height: 1.15;
-  color: var(--ink);
-}
-
-.hero__doc-role {
-  margin-top: 10px;
-  font-size: 0.82rem;
-  line-height: 1.45;
-  color: var(--ink-mute);
-}
-
-.hero__doc-exp {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: var(--ink);
-  font-variant-numeric: lining-nums;
-}
-
-.hero__doc-exp b {
-  font-weight: 500;
-  color: var(--gold-deep);
-}
-
-@media (max-width: 559px) {
-  .hero__doc {
-    position: static;
-    width: auto;
-    margin-top: -34px;
-    margin-inline: 14px;
-    border: 1px solid var(--line);
-  }
-
-  /* на узких экранах подсказка «листайте» налезала на карточку врача */
-  .hero .scroll-hint {
-    display: none;
-  }
+  box-shadow: 0 34px 70px -40px rgba(3, 2, 2, 0.55);
 }
 
 .hero__badge {
@@ -1172,6 +1121,14 @@ body.is-locked .header__phone--second {
   height: 46px;
   background: linear-gradient(to bottom, var(--gold), transparent);
   animation: scroll-pulse 2.1s var(--ease) infinite;
+}
+
+/* Пока колонки не разошлись, фото стоит внизу первого экрана
+   и подсказка «листайте» ложилась прямо на него */
+@media (max-width: 999px) {
+  .hero .scroll-hint {
+    display: none;
+  }
 }
 
 @keyframes scroll-pulse {
